@@ -1,0 +1,1840 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>
+            PySide6 Widgets — QCheckBox, QComboBox, QPushButton, QLabel, QSlider
+
+    </title>
+
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin">
+    <meta http-equiv='content-language' content='en-us'>
+
+<meta property="og:title" content="PySide6 Widgets — QCheckBox, QComboBox, QPushButton, QLabel, QSlider" />
+<meta name="twitter:title" content="PySide6 Widgets — QCheckBox, QComboBox, QPushButton, QLabel, QSlider">
+<meta property="og:url" content="https://www.pythonguis.com/tutorials/pyside6-widgets/" />
+<meta name="twitter:url" content="https://www.pythonguis.com/tutorials/pyside6-widgets/">
+
+
+
+<meta name="description" content="Qt has a huge library of built-in widgets available for use in your Python GUIs, from simple line edit and checkboxes, to fully-fledged web browser and media player components. In Qt (and most User Interfaces) &lsquo;widget&rsquo; is the name given to a component of the UI that the user can interact with." />
+<meta property="og:description" content="Qt has a huge library of built-in widgets available for use in your Python GUIs, from simple line edit and checkboxes, to fully-fledged web browser and media player components. In Qt (and most User Interfaces) &lsquo;widget&rsquo; is the name given to a component of the UI that the user can interact with." />
+<meta name="twitter:description" content="Qt has a huge library of built-in widgets available for use in your Python GUIs, from simple line edit and checkboxes, to fully-fledged web browser and media player components. In Qt (and most User Interfaces) &lsquo;widget&rsquo; is the name given to a component of the UI that the user can interact with.">
+
+
+
+<link href="https://www.pythonguis.com/tutorials/pyside6-widgets/" rel="canonical" />
+
+<meta property="og:site_name" content="Python GUIs" />
+
+<meta itemprop="datePublished" content="2021-10-03">
+<meta property="article:published_time" content="2021-10-03T09:00:00+00:00" />
+
+<meta itemprop="dateModified" content="2022-02-02">
+<meta property="article:modified_time" content="2022-02-02T08:32:54+00:00" />
+
+
+<meta property="article:tag" content="qt" />
+<meta property="article:tag" content="pyside" />
+<meta property="article:tag" content="pyside6" />
+<meta property="article:tag" content="widgets" />
+<meta property="article:tag" content="qlabel" />
+<meta property="article:tag" content="qcheckbox" />
+<meta property="article:tag" content="qcombobox" />
+<meta property="article:tag" content="qlistbox" />
+<meta property="article:tag" content="qlineedit" />
+<meta property="article:tag" content="qspinbox" />
+<meta property="article:tag" content="qdoublespinbox" />
+<meta property="article:tag" content="qslider" />
+<meta property="article:tag" content="qwidget" />
+<meta property="article:tag" content="python" />
+<meta property="article:tag" content="qt6" />
+
+<meta property="keywords"
+  content="qt,pyside,pyside6,widgets,qlabel,qcheckbox,qcombobox,qlistbox,qlineedit,qspinbox,qdoublespinbox,qslider,qwidget,python,qt6" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.pythonguis.com/images/courses/helloworld_JeRwi1P.jpg">
+<meta name="twitter:image:src" content="https://www.pythonguis.com/images/courses/helloworld_JeRwi1P.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "headline": "PySide6 Widgets — QCheckBox, QComboBox, QPushButton, QLabel, QSlider",
+    "image": "https://www.pythonguis.com/images/courses/helloworld_JeRwi1P.jpg",
+    "keywords": "qt,pyside,pyside6,widgets,qlabel,qcheckbox,qcombobox,qlistbox,qlineedit,qspinbox,qdoublespinbox,qslider,qwidget,python,qt6",
+    "url": "https://www.pythonguis.com/tutorials/pyside6-widgets/",
+    "author": {
+        "@type": "Person",
+        "name": "Martin Fitzpatrick",
+        "url": "https://www.mfitzp.com"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Python GUIs",
+        "url": "https://www.pythonguis.com",
+        "logo": {
+            "@type": "Imageobj",
+            "url": "https://www.pythonguis.com/theme/image/logo-card.png",
+            "name": "Python GUIs Logo"
+        }
+    },
+    "datePublished": "2021-10-03 09:00:00+00:00",
+    "dateModified": "2022-02-02 08:32:54+00:00"
+    }
+    </script>
+
+
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+        {
+        "@type": "ListItem",
+        "position": 0,
+        "item":
+        {
+          "@id": "https://www.pythonguis.com/tutorials/",
+          "name": "tutorials"
+          }
+      },
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item":
+          {
+          "@id": "https://www.pythonguis.com/pyside6-tutorial/#pyside6-getting-started",
+          "name": "Getting started with PySide6"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item":
+          {
+            "@id": "https://www.pythonguis.com/tutorials/pyside6-widgets/",
+            "name": "PySide6 Widgets"
+            }
+        }
+        ]
+      }
+      </script>
+
+
+<link rel="author" href="https://www.pythonguis.com">
+<link rel="publisher" href="https://www.pythonguis.com"><meta name="flattr:id" content="gwy91w">
+<meta name="google-site-verification" content="Ogw6ZN_S7dzUc9huqkiLOeI_BH8F__4Ft8pNXQVU1Cw" />
+<meta name="google-site-verification" content="tnbPDWRORDk2SjXzRhyh5HOarf2hDojT07FQS2zcMUY" />
+<meta name="google-site-verification" content="2DFeXMiIAIVr20q8LLteYxffew35Pp89MXa7Hyy0_IM" />
+<meta name="google-site-verification" content="aDPLnwleWQc6nHK2vIMKXY5kUBDHFUPNJ75QcdcdEss" />
+<meta name="msvalidate.01" content="79DE55785B481065302BA20C0A64D33F" />
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://ik.imagekit.io">
+
+<!-- CSS, will be bundled -->
+<link rel="stylesheet" href="https://www.pythonguis.com/theme/css/pure-min.css" type='text/css'>
+<link rel="stylesheet" href="https://www.pythonguis.com/theme/css/grids-responsive-min.css" type='text/css'>
+<link rel="stylesheet" href="https://www.pythonguis.com/theme/css/main.css" type='text/css'>
+
+<!-- Font preload -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" />
+
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<!-- Font actual load, onload swap -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" media="print" onload="this.media='all'" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'" />
+
+<!-- <link rel="manifest" href="/manifest.json" /> -->
+
+<link href="https://www.pythonguis.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+  title="Python GUIs Full Atom Feed" />
+<link href="https://www.pythonguis.com/feeds/atom.xml" type="application/atom+xml" rel="alternate"
+  title="Python GUIs Atom Feed" />
+<link href="https://www.pythonguis.com/feeds/rss.xml" type="application/rss+xml" rel="alternate"
+  title="Python GUIs RSS Feed" />
+<link href="https://www.pythonguis.com/feeds/tutorials.atom.xml" type="application/atom+xml"
+  rel="alternate" title="Python GUIs tutorials Atom Feed" />
+<link href="https://www.pythonguis.com/feeds/tutorials.rss.xml" type="application/rss+xml"
+  rel="alternate" title="Python GUIs tutorials RSS Feed" />
+
+
+<!--    <script src="https://cdn.podia.com/embeds.js" async="async"></script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S44SSWQ422"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S44SSWQ422');
+</script>
+
+<!-- MailerLite Universal
+<script>
+  (function (m, a, i, l, e, r) {
+    m['MailerLiteObject'] = e; function f() {
+      var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
+    }
+    f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+    var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+    _.parentNode.insertBefore(r, _);
+  })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+  var ml_account = ml('accounts', '1083120', 'o8o0o8k0r4', 'load');
+</script>
+<script>
+  var ml_webform_793852 = ml_account('webforms', '793852', 'e6q5x4', 'load');
+  ml_webform_793852('animation', 'fadeIn');
+</script>
+End MailerLite Subscribe -->
+    <style>
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0;font-family:"Montserrat",sans-serif}[v-cloak]{display:none !important}.logo-small{width:222px;height:32px}.navigation-collapsed,.menu-item-collapsed{display:none !important}.navigation-expanded,.menu-item-expanded{display:inline-block}@media screen and (max-width:1200px){.navigation-collapsed,.menu-item-collapsed{display:inline-block !important}.menu-item-collapsed{display:block !important}.navigation-expanded,.menu-item-expanded,.expanded{display:none !important}}#welcome{background-color:#ffd141;text-align:center;padding:.5rem 1rem;margin:0}#welcome p,#welcome a{color:#0d1f2d;font-size:.9rem;margin:0}body.wide-top #container-top{max-width:100%}body.wide #container{max-width:100%}body.wide-bottom #container-bottom{max-width:100%}body.article #container,body.page #container,.header-center,.article-header-center,.category-header-center,.tag-header-center{margin:0 auto}    </style>
+
+
+</head>
+
+<body class="article  tagged-qt  tagged-pyside  tagged-pyside6  tagged-widgets  tagged-qlabel  tagged-qcheckbox  tagged-qcombobox  tagged-qlistbox  tagged-qlineedit  tagged-qspinbox  tagged-qdoublespinbox  tagged-qslider  tagged-qwidget  tagged-python  tagged-qt6  academy " data-instant-intensity="mousedown">
+    <div id="app">
+<div id="header" class="pure-g header-small">
+
+    <div class="pure-menu pure-menu-horizontal navigation-bar navigation-top">
+        <ul class="pure-menu-list pure-menu-left">
+<!-- Navigation collapsed -->
+<li class="navigation-collapsed pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+    <a class="pure-menu-link collapsed-nav-button"><i class="fas fa-bars"></i></a>
+    <ul class="pure-menu-children">
+        <li class="pure-menu-item"><a href="/books/"
+        class="pure-menu-link menu-highlight menu-bottom"><i class="fas fa-book-open"></i>
+        Books</a></li>
+        <li class="pure-menu-item"><a href="/tracks/" class="pure-menu-link">Learning tracks</a></li>
+        <li class="pure-menu-item"><a href="/courses/" class="pure-menu-link">Courses</a></li>
+        <li class="pure-menu-item"><a href="/tutorials/" class="pure-menu-link">Tutorials</a></li>
+        <li class="pure-menu-item"><a href="/faq/" class="pure-menu-link">FAQ</a></li>
+        <li class="pure-menu-item"><a href="/examples/" class="pure-menu-link">Examples</a></li>
+    </ul>
+</li>
+            <li class="pure-menu-item site-logo">
+                <a href="/" class="logo" title="Python GUIs"></a>
+            </li>
+
+
+            <!-- Navigation: expanded -->
+            <li class="navigation-expanded pure-menu-item"><a href="/pyqt-tutorial/"
+                class="pure-menu-link">
+                Start here
+            </a>
+            </li>
+
+            <li class="navigation-expanded pure-menu-item"><a href="/books/"
+                class="pure-menu-link">
+                Books
+            </a>
+            </li>
+
+            <li class="navigation-expanded pure-menu-item">
+                <a href="/tracks/" class="pure-menu-link">Tracks</a>
+            </li>
+
+
+<li class="navigation-expanded pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+    <a href="https://www.pythonguis.com/tutorials/" id="nav-tutorials" class="pure-menu-link">
+        <!-- <i class="fas fa-layer-group"></i> -->
+Tutorials    </a>
+    <ul class="pure-menu-children">
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/"
+                class="pure-menu-link ">Packaging PyQt5 applications into a macOS app with PyInstaller
+<span class="updated">updated</span><small><br><i class="fas fa-layer-group"></i> Packaging and distribution</small>                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/"
+                class="pure-menu-link ">Packaging PyQt5 applications for Windows with PyInstaller & InstallForge
+<span class="updated">updated</span><small><br><i class="fas fa-layer-group"></i> Packaging and distribution</small>                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyside6-signals-slots-events/"
+                class="pure-menu-link ">PySide6 Signals, Slots & Events
+<span class="updated">updated</span><small><br><i class="fas fa-layer-group"></i> Getting started with PySide6</small>                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyside6-layouts/"
+                class="pure-menu-link ">PySide6 Layouts
+<span class="updated">updated</span><small><br><i class="fas fa-layer-group"></i> Getting started with PySide6</small>                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt6-applications-windows-pyinstaller/"
+                class="pure-menu-link ">Packaging PyQt6 applications for Windows with PyInstaller & InstallForge
+<small><br><i class="fas fa-layer-group"></i> Packaging and distribution</small>                </a>
+        </li>
+    </ul>
+</li>
+
+<li class="navigation-expanded pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+    <a href="https://www.pythonguis.com/faq/" id="nav-faq" class="pure-menu-link">
+        <!-- <i class="fas fa-layer-group"></i> -->
+FAQ    </a>
+    <ul class="pure-menu-children">
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/faq/pyqt5-vs-pyqt6/"
+                class="pure-menu-link ">PyQt5 vs PyQt6
+                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/faq/pyside2-vs-pyside6/"
+                class="pure-menu-link ">PySide2 vs PySide6
+                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/faq/pyqt-drag-drop-widgets/"
+                class="pure-menu-link ">Drag & drop widgets with PyQt
+                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/faq/pyqt-qthreadpool-simple-threading/"
+                class="pure-menu-link ">Simple threading in PyQt/PySide apps with .start() of QThreadPool
+                </a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/faq/pyqt-qtablewidget-search/"
+                class="pure-menu-link ">Search a QTablewidget and select matching items
+                </a>
+        </li>
+    </ul>
+</li>
+
+<li class="navigation-expanded pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+    <a href="https://www.pythonguis.com/topics/" id="nav-topics" class="pure-menu-link">
+        Topics
+    </a>
+    <ul class="pure-menu-children">
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/topics/pyqt/"
+                class="pure-menu-link">
+<i class="fas fa-window-restore"></i>&nbsp;                PyQt</a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/topics/pyside/"
+                class="pure-menu-link">
+<i class="fas fa-window-restore"></i>&nbsp;                PySide</a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/topics/packaging/"
+                class="pure-menu-link">
+<i class="fas fa-box-open"></i>&nbsp;                Packaging GUI applications</a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/topics/numpy/"
+                class="pure-menu-link">
+<i class="fas fa-superscript"></i>&nbsp;                NumPy</a>
+        </li>
+        <li class="pure-menu-item"><a href="https://www.pythonguis.com/topics/pandas/"
+                class="pure-menu-link">
+<i class="fas fa-table"></i>&nbsp;                Pandas & Datatables</a>
+        </li>
+    </ul>
+</li>
+        </ul>
+
+    </div>
+
+
+</div>
+        <a name="top"></a>
+        <div id="main">
+
+
+            <div id="container-top" class="pure-g">
+                <!-- { % include "partials/breadcrumbs.html" % } -->
+<div id="content-upper" class="pure-u-1-1 l-box content-spacer">
+
+
+<div id="breadcrumbs" class="pure-u-1-1">
+  <ol>
+    <li>
+      <a href="https://www.pythonguis.com/pyside6-tutorial/">
+        <i class="fas fa-book"></i>
+        PySide6 Tutorial
+      </a>/
+    </li>
+    <li>
+      <a href="https://www.pythonguis.com/pyside6-tutorial/#pyside6-getting-started">
+        Getting started with PySide6
+      </a>
+    </li>
+  </ol>
+</div>
+
+
+
+
+
+
+    <div class="pure-u-1-1 article-header">
+
+        <div class=" article-header-center">
+            <h1><span>PySide6 Widgets<br /><small> Using PySide6's built-in widgets to build your applications</small></span></h1>
+
+        </div>
+
+    </div>
+</div>
+
+            </div>
+
+            <div id="container" class="pure-g">
+<div class="pure-u-1-1 pure-u-md-17-24 l-box">
+<div class="byline">
+
+
+
+  <span class="byline-part">
+    by <a href="https://www.pythonguis.com/authors/martin-fitzpatrick/">Martin Fitzpatrick</a>
+  </span>
+
+  <span class="byline-part"><i class="fas fa-calendar"></i>
+  Last updated <time datetime="2022-02-02 08:32:54+00:00">2 February 2022</time>
+
+
+  <span class="byline-part">
+    <i class="fas fa-folder"></i>
+    <a href="https://www.pythonguis.com/pyside6-tutorial/#pyside6-getting-started">
+      Getting started with PySide6
+    </a>
+  </span>
+
+
+
+</div>
+
+
+<p class="notice">This article has been updated for PySide6.</p>
+
+<div class="article-curriculum">
+  <h4>
+    <a href="https://www.pythonguis.com/pyside6-tutorial/">
+      <i class="fas fa-book"></i>
+      PySide6 Tutorial
+    </a>
+    &mdash;
+    <a href="https://www.pythonguis.com/pyside6-tutorial/#pyside6-getting-started">
+    Getting started with PySide6
+    </a>
+</h4>
+
+  <ul class="course-lessons fa-ul">
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i
+          v-bind:class="user.completed.includes('pyside6-creating-your-first-window') ? 'fas fa-check-circle complete' : 'far fa-circle'"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-creating-your-first-window/">Creating your first app with PySide6</a>
+
+    </li>
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i
+          v-bind:class="user.completed.includes('pyside6-signals-slots-events') ? 'fas fa-check-circle complete' : 'far fa-circle'"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-signals-slots-events/">PySide6 Signals, Slots & Events</a>
+
+    </li>
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i class="fas fa-hand-point-right"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-widgets/">PySide6 Widgets</a>
+
+    </li>
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i
+          v-bind:class="user.completed.includes('pyside6-layouts') ? 'fas fa-check-circle complete' : 'far fa-circle'"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-layouts/">PySide6 Layouts</a>
+
+    </li>
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i
+          v-bind:class="user.completed.includes('pyside6-actions-toolbars-menus') ? 'fas fa-check-circle complete' : 'far fa-circle'"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-actions-toolbars-menus/">PySide6 Toolbars & Menus — QAction</a>
+
+    </li>
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i
+          v-bind:class="user.completed.includes('pyside6-dialogs') ? 'fas fa-check-circle complete' : 'far fa-circle'"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-dialogs/">PySide6 Dialogs and Alerts</a>
+
+    </li>
+    <li class="lesson-row">
+      <span class="fa-li">
+        <i
+          v-bind:class="user.completed.includes('pyside6-creating-multiple-windows') ? 'fas fa-check-circle complete' : 'far fa-circle'"></i>
+      </span>
+
+      <a href="https://www.pythonguis.com/tutorials/pyside6-creating-multiple-windows/">Creating additional windows</a>
+
+    </li>
+  </ul>
+
+<p class="crosslinks">
+    This tutorial is also available for
+    <a href="https://www.pythonguis.com/tutorials/pyqt6-widgets/" class="crosslink-tag">PyQt6</a>
+,     <a href="https://www.pythonguis.com/tutorials/pyside-widgets/" class="crosslink-tag">PySide2</a>
+ and     <a href="https://www.pythonguis.com/tutorials/pyqt-basic-widgets/" class="crosslink-tag">PyQt5</a>
+</p>
+
+</div>
+    <article class="post">
+        <a name="top"></a>
+        <div id="article-main-body"
+            class="article-wrap  article-main-body">
+            <p>In Qt (and most User Interfaces) &lsquo;widget&rsquo; is the name given to a component of the UI that the user can interact with. User interfaces are made up of multiple widgets, arranged within the window.</p>
+<p>Qt comes with a large selection of widgets available, and even allows you to create your own custom and customized widgets.</p>
+<h2 id="a-quick-demo">A quick demo</h2>
+<p>First let's have a look at some of the most common PyQt widgets. The following code creates a range of PyQt widgets and adds them to a window layout so you can see them together.</p>
+<p class="admonition admonition-note"><span class="admonition-kind"><i class="fas fa-pencil-alt"></i></span>  We'll cover how layouts work in Qt in the next tutorial.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">import sys
+
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import (
+    QApplication,
+    QCheckBox,
+    QComboBox,
+    QDateEdit,
+    QDateTimeEdit,
+    QDial,
+    QDoubleSpinBox,
+    QFontComboBox,
+    QLabel,
+    QLCDNumber,
+    QLineEdit,
+    QMainWindow,
+    QProgressBar,
+    QPushButton,
+    QRadioButton,
+    QSlider,
+    QSpinBox,
+    QTimeEdit,
+    QVBoxLayout,
+    QWidget,
+)
+
+
+# Subclass QMainWindow to customize your application's main window
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("Widgets App")
+
+        layout = QVBoxLayout()
+        widgets = [
+            QCheckBox,
+            QComboBox,
+            QDateEdit,
+            QDateTimeEdit,
+            QDial,
+            QDoubleSpinBox,
+            QFontComboBox,
+            QLCDNumber,
+            QLabel,
+            QLineEdit,
+            QProgressBar,
+            QPushButton,
+            QRadioButton,
+            QSlider,
+            QSpinBox,
+            QTimeEdit,
+        ]
+
+        for w in widgets:
+            layout.addWidget(w())
+
+        widget = QWidget()
+        widget.setLayout(layout)
+
+        # Set the central widget of the Window. Widget will expand
+        # to take up all the space in the window by default.
+        self.setCentralWidget(widget)
+
+
+app = QApplication(sys.argv)
+window = MainWindow()
+window.show()
+
+app.exec_()
+
+</code></pre>
+</div>
+<p class="admonition admonition-run"><span class="admonition-kind"><i class="fas fa-rocket"></i></span> <strong>Run it!</strong> You'll see a window appear containing all the widgets we've created.</p>
+<p><img alt="Big ol' list of widgets on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets-list.png"/>
+<em>Big ol' list of widgets on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>Lets have a look at all the example widgets, from top to bottom:</p>
+<table class="pure-table pure-table-horizontal pure-table-tight">
+<thead>
+<tr>
+<th>Widget</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QCheckbox</code></td>
+<td>A checkbox</td>
+</tr>
+<tr>
+<td><code>QComboBox</code></td>
+<td>A dropdown list box</td>
+</tr>
+<tr>
+<td><code>QDateEdit</code></td>
+<td>For editing dates and datetimes</td>
+</tr>
+<tr>
+<td><code>QDateTimeEdit</code></td>
+<td>For editing dates and datetimes</td>
+</tr>
+<tr>
+<td><code>QDial</code></td>
+<td>Rotateable dial</td>
+</tr>
+<tr>
+<td><code>QDoubleSpinbox</code></td>
+<td>A number spinner for floats</td>
+</tr>
+<tr>
+<td><code>QFontComboBox</code></td>
+<td>A list of fonts</td>
+</tr>
+<tr>
+<td><code>QLCDNumber</code></td>
+<td>A quite ugly LCD display</td>
+</tr>
+<tr>
+<td><code>QLabel</code></td>
+<td>Just a label, not interactive</td>
+</tr>
+<tr>
+<td><code>QLineEdit</code></td>
+<td>Enter a line of text</td>
+</tr>
+<tr>
+<td><code>QProgressBar</code></td>
+<td>A progress bar</td>
+</tr>
+<tr>
+<td><code>QPushButton</code></td>
+<td>A button</td>
+</tr>
+<tr>
+<td><code>QRadioButton</code></td>
+<td>A toggle set, with only one active item</td>
+</tr>
+<tr>
+<td><code>QSlider</code></td>
+<td>A slider</td>
+</tr>
+<tr>
+<td><code>QSpinBox</code></td>
+<td>An integer spinner</td>
+</tr>
+<tr>
+<td><code>QTimeEdit</code></td>
+<td>For editing times</td>
+</tr>
+</tbody>
+</table>
+<p>There are far more widgets than this, but they don&rsquo;t fit so well! You can see them all by checking the Qt documentation.</p>
+<p>Next, we'll step through some of the most commonly used widgets and look at them in more detail. To experiment with the widgets we'll need a simple application to put them in. Save the following code to a file named <code>app.py</code> and run it to make sure it's working.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">import sys
+from PySide6.QtWidgets import (
+    QMainWindow, QApplication,
+    QLabel, QCheckBox, QComboBox, QListBox, QLineEdit,
+    QLineEdit, QSpinBox, QDoubleSpinBox, QSlider
+)
+from PySide6.QtCore import Qt
+
+class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        self.setWindowTitle("My App")
+
+
+app = QApplication(sys.argv)
+w = MainWindow()
+w.show()
+app.exec_()
+</code></pre>
+</div>
+<p>In the code above we've imported a number of Qt widgets. Now we'll step through each of those widgets in turn, adding them to our
+application and seeing how they behave.</p>
+<h2 id="qlabel">QLabel</h2>
+<p>We'll start the tour with <code>QLabel</code>, arguably one of the simplest widgets available in the Qt toolbox. This is a simple one-line piece of text that you can position in your application. You can set the text by  passing in a <code>str</code> as you create it:</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget = QLabel("Hello")
+</code></pre>
+</div>
+<p>Or, by using the <code>.setText()</code> method:</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget = QLabel("1")  # The label is created with the text 1.
+widget.setText("2")   # The label now shows 2.
+</code></pre>
+</div>
+<p>You can also adjust font parameters, such as the size of the font or
+the alignment of text in the widget.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QLabel("Hello")
+        font = widget.font()
+        font.setPointSize(30)
+        widget.setFont(font)
+        widget.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+
+        self.setCentralWidget(widget)
+</code></pre>
+</div>
+<p><img alt="QLabel on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets1.png"/>
+<em>QLabel on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p class="admonition admonition-tip"><span class="admonition-kind"><i class="fas fa-lightbulb"></i></span> <strong>Font tip</strong> Note that if you want to change the properties of a widget font it is usually better to get the <em>current</em> font, update it and then apply it back. This ensures the font face remains in keeping with the desktop conventions.</p>
+<p>The alignment is specified by using a flag from the <code>Qt.</code> namespace.
+The flags available for horizontal alignment are:</p>
+<table class="pure-table pure-table-horizontal pure-table-tight">
+<thead>
+<tr>
+<th>Flag</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Qt.AlignLeft</code></td>
+<td>Aligns with the left edge.</td>
+</tr>
+<tr>
+<td><code>Qt.AlignRight</code></td>
+<td>Aligns with the right edge.</td>
+</tr>
+<tr>
+<td><code>Qt.AlignHCenter</code></td>
+<td>Centers horizontally in the available space.</td>
+</tr>
+<tr>
+<td><code>Qt.AlignJustify</code></td>
+<td>Justifies the text in the available space.</td>
+</tr>
+</tbody>
+</table>
+<p>The flags available for vertical alignment are:</p>
+<table class="pure-table pure-table-horizontal pure-table-tight">
+<thead>
+<tr>
+<th>Flag</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Qt.AlignTop</code></td>
+<td>Aligns with the top.</td>
+</tr>
+<tr>
+<td><code>Qt.AlignBottom</code></td>
+<td>Aligns with the bottom.</td>
+</tr>
+<tr>
+<td><code>Qt.AlignVCenter</code></td>
+<td>Centers vertically in the available space.</td>
+</tr>
+</tbody>
+</table>
+<p>You can combine flags together using pipes (<code>|</code>), however note that you
+can only use vertical or horizontal alignment flag at a time.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">align_top_left = Qt.AlignLeft | Qt.AlignTop
+</code></pre>
+</div>
+<p class="admonition admonition-tip"><span class="admonition-kind"><i class="fas fa-lightbulb"></i></span>  Note that you use an <em>OR</em> pipe (`|`) to combine the two flags (not <code>A &amp;amp; B</code>). This is because the flags are non-overlapping bitmasks. e.g. <code>Qt.AlignLeft</code> has the hexadecimal value <code>0x0001</code>, while <code>Qt.AlignBottom</code>is <code>0x0040</code>.  By ORing together we get the value <code>0x0041</code> representing 'bottom left'. This principle applies to all other combinatorial Qt flags.  If this is gibberish to you, feel free to ignore and move on. Just remember to use |</p>
+<p>Finally, there is also a shorthand flag that centers in both directions simultaneously:</p>
+<table class="pure-table pure-table-horizontal pure-table-tight">
+<thead>
+<tr>
+<th>Flag</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Qt.AlignCenter</code></td>
+<td>Centers horizontally <em>and</em> vertically</td>
+</tr>
+</tbody>
+</table>
+<p>Weirdly, you can also use <code>QLabel</code> to display an image using <code>.setPixmap()</code>.  This accepts an <em>pixmap</em>, which you can create by passing an image filename to <code>QPixmap</code>. In the example files provided with this book you can find a file <code>otje.jpg</code> which you can display in your window as follows:</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.setPixmap(QPixmap('otje.jpg'))
+</code></pre>
+</div>
+<p><img alt='"Otje" the cat.' src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets2.png"/>
+<em>"Otje" the cat.</em></p>
+<p>What a lovely face. By default the image scales while maintaining its aspect ratio. If you want it to stretch and scale to fit the window completely you can set <code>.setScaledContents(True)</code> on the <code>QLabel</code>.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.setScaledContents(True)
+</code></pre>
+</div>
+<h2 id="qcheckbox">QCheckBox</h2>
+<p>The next widget to look at is <code>QCheckBox()</code> which, as the name suggests, presents a checkable box to the user. However, as with all Qt widgets there are number of configurable options to change the widget behaviors.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QCheckBox()
+        widget.setCheckState(Qt.Checked)
+
+        # For tristate: widget.setCheckState(Qt.PartiallyChecked)
+        # Or: widget.setTriState(True)
+        widget.stateChanged.connect(self.show_state)
+
+        self.setCentralWidget(widget)
+
+
+    def show_state(self, s):
+        print(s == Qt.Checked)
+        print(s)
+</code></pre>
+</div>
+<p><img alt="QCheckBox on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets3.png"/>
+<em>QCheckBox on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>You can set a checkbox state programmatically using <code>.setChecked</code> or <code>.setCheckState</code>. The former accepts either <code>True</code> or <code>False</code> representing checked or unchecked respectively. However, with <code>.setCheckState</code> you also specify a particular checked state using a <code>Qt.</code> namespace flag:</p>
+<table class="pure-table pure-table-horizontal pure-table-tight">
+<thead>
+<tr>
+<th>Flag</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Qt.Unchecked</code></td>
+<td>Item is unchecked</td>
+</tr>
+<tr>
+<td><code>Qt.PartiallyChecked</code></td>
+<td>Item is partially checked</td>
+</tr>
+<tr>
+<td><code>Qt.Checked</code></td>
+<td>Item is checked</td>
+</tr>
+</tbody>
+</table>
+<p>A checkbox that supports a partially-checked (<code>Qt.PartiallyChecked</code>) state is commonly referred to as 'tri-state', that is being neither on nor off. A checkbox in this state is commonly shown as a greyed out checkbox, and is commonly used in hierarchical checkbox arrangements where sub-items are linked to parent checkboxes.</p>
+<p>If you set the value to <code>Qt.PartiallyChecked</code> the checkbox will become tristate. You can also <code>.setTriState(True)</code> to set tristate support on a You can also set a checkbox to be tri-state without setting the current state to partially checked by using <code>.setTriState(True)</code></p>
+<p>You may notice that when the script is running the current state number is displayed as an <code>int</code> with checked = <code>2</code>, unchecked = <code>0</code>, and partially  checked = <code>1</code>. You don&rsquo;t need to remember these values, the <code>Qt.Checked</code> namespace variable <code>== 2</code> for example. This is the value of these state's respective flags. This means you can test state using <code>state == Qt.Checked</code>.</p>
+<h2 id="qcombobox">QComboBox</h2>
+<p>The <code>QComboBox</code> is a drop down list, closed by default with an arrow to open it. You can select a single item from the list, with the currently selected item being shown as a label on the widget. The combo box is suited to selection of a choice from a long list of options.</p>
+<p class="admonition admonition-info"><span class="admonition-kind"><i class="fas fa-info"></i></span>  You have probably seen the combo box used for selection of font faces, or size, in word processing applications. Although Qt actually provides a specific font-selection combo box as <code>QFontComboBox</code>.</p>
+<p>You can add items to a <code>QComboBox</code> by passing a list of strings to <code>.addItems()</code>.  Items will be added in the order they are provided.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QComboBox()
+        widget.addItems(["One", "Two", "Three"])
+
+        # The default signal from currentIndexChanged sends the index
+        widget.currentIndexChanged.connect(self.index_changed)
+
+        # The same signal can send a text string
+        widget.currentTextChanged.connect(self.text_changed)
+
+        self.setCentralWidget(widget)
+
+
+    def index_changed(self, i): # i is an int
+        print(i)
+
+    def text_changed(self, s): # s is a str
+        print(s)
+</code></pre>
+</div>
+<p><img alt="QComboBox on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets4.png"/>
+<em>QComboBox on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>The <code>.currentIndexChanged</code> signal is triggered when the currently selected item is updated, by default passing the index of the selected item in the list.
+There is also a <code>.currentTextChanged</code> signal which instead provides the label of the currently selected item, which is often more useful.</p>
+<p><code>QComboBox</code> can also be editable, allowing users to enter values not currently in the list and either have them inserted, or simply used as a value. To make the box editable:</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.setEditable(True)
+</code></pre>
+</div>
+<p>You can also set a flag to determine how the insert is handled. These flags are stored on the <code>QComboBox</code> class itself and are listed below:</p>
+<table class="pure-table pure-table-horizontal pure-table-tight">
+<thead>
+<tr>
+<th>Flag</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QComboBox.NoInsert</code></td>
+<td>No insert</td>
+</tr>
+<tr>
+<td><code>QComboBox.InsertAtTop</code></td>
+<td>Insert as first item</td>
+</tr>
+<tr>
+<td><code>QComboBox.InsertAtCurrent</code></td>
+<td>Replace currently selected item</td>
+</tr>
+<tr>
+<td><code>QComboBox.InsertAtBottom</code></td>
+<td>Insert after last item</td>
+</tr>
+<tr>
+<td><code>QComboBox.InsertAfterCurrent</code></td>
+<td>Insert after current item</td>
+</tr>
+<tr>
+<td><code>QComboBox.InsertBeforeCurrent</code></td>
+<td>Insert before current item</td>
+</tr>
+<tr>
+<td><code>QComboBox.InsertAlphabetically</code></td>
+<td>Insert in alphabetical order</td>
+</tr>
+</tbody>
+</table>
+<p>To use these, apply the flag as follows:</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.setInsertPolicy(QComboBox.InsertAlphabetically)
+</code></pre>
+</div>
+<p>You can also limit the number of items allowed in the box by using <code>.setMaxCount</code>, e.g.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.setMaxCount(10)
+</code></pre>
+</div>
+<p class="admonition admonition-tip"><span class="admonition-kind"><i class="fas fa-lightbulb"></i></span>  For a more in-depth look at the <code>QComboBox</code> take a look at my <a href="/docs/qcombobox/">QComboBox documentation</a>.</p>
+<h2 id="qlistwidget">QListWidget</h2>
+<p>Next <code>QListWidget</code>. It&rsquo;s very similar to <code>QComboBox</code>, differing mainly in the
+signals available.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QListWidget()
+        widget.addItems(["One", "Two", "Three"])
+
+        # In QListWidget there are two separate signals for the item, and the str
+        widget.currentItemChanged.connect( self.index_changed )
+        widget.currentTextChanged.connect( self.text_changed )
+
+        self.setCentralWidget(widget)
+
+
+    def index_changed(self, i): # Not an index, i is a QListItem
+        print(i.text())
+
+    def text_changed(self, s): # s is a str
+        print(s)
+</code></pre>
+</div>
+<p><img alt="QListWidget on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets5.png"/>
+<em>QListWidget on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p><code>QListWidget</code> offers an <code>currentItemChanged</code> signal which sends the <code>QListItem</code> (the element of the list box), and a <code>currentTextChanged</code> signal which sends the text.</p>
+<div class="product pure-g">
+    <div class="pure-u-1-1 pure-u-md-1-2 l-box">
+        <h3><a 
+            href="/pyside2-book/"
+            >Create GUI Applications with Python & Qt5<small>
+                    <br>The easy way to create desktop applications</small></a></h3>
+        <div class="product-details">
+            <p>The complete guide to building GUI applications with PySide2. From the basics of creating a desktop window to the key features you need to build real apps.</p>
+        </div>
+
+        <div class="product-actions">
+
+            <a href="https://www.pythonguis.com/pyside2-book/" class="pure-button button-info">More info <i
+                    class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="pure-u-1-1 pure-u-md-1-2">
+<a href="https://www.pythonguis.com/pyside2-book/">            <img src="https://www.pythonguis.com/theme/images/books/pyside2.png" title="PySide2 book"
+                class="pure-img product-image">
+</a>
+        <div class="pure-u-1-1 product-smallprint">
+            <p>Downloadable ebook (PDF, ePub) &amp; Complete Source code</p>
+        </div>
+    </div>
+
+
+    <div class="pure-u-1-1 product-coupon"><p v-if="localizedPrices" class="sale-notice" v-cloak>
+    <strong>To support developers in [[ countryRegion ]]</strong> I give a
+    <strong><i class="fas fa-gift"></i> [[ localizedDiscount[couponCode] ]]% discount</strong> 
+    with the code [[ couponCode ]] &mdash; Enjoy!
+    <!-- with the code <strong>[[ couponCode ]]</strong> -->
+</p>
+
+<p v-if="!localizedPrices && activeDiscount" class="sale-notice" v-bind:class="activeDiscount.css" v-cloak>
+    For <strong>[[ activeDiscount.description ]]</strong> I'm giving a
+    <strong><i class="fas fa-gift"></i> [[ activeDiscount.discount ]]% discount</strong> 
+    with the code [[ couponCode ]] &mdash; Enjoy!
+    <!-- with the code <strong>[[ couponCode ]]</strong> -->
+</p></div>
+
+</div><h2 id="qlineedit">QLineEdit</h2>
+<p>The <code>QLineEdit</code> widget is a simple single-line text editing box, into which users can type input. These are used for form fields, or settings where there is no restricted list of valid inputs. For example, when entering an email address, or computer name.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QLineEdit()
+        widget.setMaxLength(10)
+        widget.setPlaceholderText("Enter your text")
+
+        #widget.setReadOnly(True) # uncomment this to make readonly
+
+        widget.returnPressed.connect(self.return_pressed)
+        widget.selectionChanged.connect(self.selection_changed)
+        widget.textChanged.connect(self.text_changed)
+        widget.textEdited.connect(self.text_edited)
+
+        self.setCentralWidget(widget)
+
+
+    def return_pressed(self):
+        print("Return pressed!")
+        self.centralWidget().setText("BOOM!")
+
+    def selection_changed(self):
+        print("Selection changed")
+        print(self.centralWidget().selectedText())
+
+    def text_changed(self, s):
+        print("Text changed...")
+        print(s)
+
+    def text_edited(self, s):
+        print("Text edited...")
+        print(s)
+</code></pre>
+</div>
+<p><img alt="QLineEdit on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets6.png"/>
+<em>QLineEdit on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>As demonstrated in the above code, you can set a maximum length for the text in a line edit.</p>
+<p>The <code>QLineEdit</code> has a number of signals available for different editing events including when return is pressed (by the user), when the user selection is changed. There are also two edit signals, one for when the text in the box has been edited and one for when it has been changed. The distinction here is between user edits and programmatic changes. The <code>textEdited</code> signal is only sent when the user edits text.</p>
+<p>Additionally, it is possible to perform input validation using an <em>input mask</em> to define which characters are supported and where. This can be applied to the field as follows:</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.setInputMask('000.000.000.000;_')
+</code></pre>
+</div>
+<p>The above would allow a series of 3-digit numbers separated with periods, and could therefore be used to validate IPv4 addresses.</p>
+<h2 id="qspinbox-and-qdoublespinbox">QSpinBox and QDoubleSpinBox</h2>
+<p><code>QSpinBox</code> provides a small numerical input box with arrows to increase and decrease the value. <code>QSpinBox</code> supports integers while the related widget <code>QDoubleSpinBox</code> supports floats.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QSpinBox()
+        # Or: widget = QDoubleSpinBox()
+
+        widget.setMinimum(-10)
+        widget.setMaximum(3)
+        # Or: widget.setRange(-10,3)
+
+        widget.setPrefix("$")
+        widget.setSuffix("c")
+        widget.setSingleStep(3)  # Or e.g. 0.5 for QDoubleSpinBox
+        widget.valueChanged.connect(self.value_changed)
+        widget.textChanged.connect(self.value_changed_str)
+
+        self.setCentralWidget(widget)
+
+    def value_changed(self, i):
+        print(i)
+
+    def value_changed_str(self, s):
+        print(s)
+</code></pre>
+</div>
+<p>Run it and you'll see a numeric entry box. The value shows pre and post fix units, and is limited to the range +3 to -10.</p>
+<p><img alt="QSpinBox on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets7.png"/>
+<em>QSpinBox on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>The demonstration code above shows the various features that are available for the widget.</p>
+<p>To set the range of acceptable values you can use <code>setMinimum</code> and <code>setMaximum</code>, or alternatively use <code>setRange</code> to set both simultaneously. Annotation of value types is supported with both prefixes and suffixes that can be added to the number, e.g. for currency markers or units using <code>.setPrefix</code> and <code>.setSuffix</code> respectively.</p>
+<p>Clicking on the up and down arrows on the widget will increase or decrease the value in the widget by an amount, which can be set using <code>.setSingleStep</code>. Note that this has no effect on the values that are acceptable to the widget.</p>
+<p>Both <code>QSpinBox</code> and <code>QDoubleSpinBox</code> have a <code>.valueChanged</code> signal which fires whenever their value is altered. The raw <code>.valueChanged</code> signal sends the numeric value (either an <code>int</code> or a <code>float</code>) while <code>.textChanged</code> sends the value as a string, including both the prefix and suffix characters.</p>
+<h2 id="qslider">QSlider</h2>
+<p><code>QSlider</code> provides a slide-bar widget, which functions internally much like a <code>QDoubleSpinBox</code>. Rather than display the current value numerically, it is represented by the position of the slider handle along the length of the widget. This is often useful when providing adjustment between two extremes, but where absolute accuracy is not required. The most common use of this type of widget is for volume controls.</p>
+<p>There is an additional <code>.sliderMoved</code> signal that is triggered whenever the slider moves position and a <code>.sliderPressed</code> signal that emits whenever the slider is clicked.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QSlider()
+
+        widget.setMinimum(-10)
+        widget.setMaximum(3)
+        # Or: widget.setRange(-10,3)
+
+        widget.setSingleStep(3)
+
+        widget.valueChanged.connect(self.value_changed)
+        widget.sliderMoved.connect(self.slider_position)
+        widget.sliderPressed.connect(self.slider_pressed)
+        widget.sliderReleased.connect(self.slider_released)
+
+        self.setCentralWidget(widget)
+
+    def value_changed(self, i):
+        print(i)
+
+    def slider_position(self, p):
+        print("position", p)
+
+    def slider_pressed(self):
+        print("Pressed!")
+
+    def slider_released(self):
+        print("Released")
+</code></pre>
+</div>
+<p>Run this and you'll see a slider widget. Drag the slider to change the value.</p>
+<p><img alt="QSlider on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets8.png"/>
+<em>QSlider on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>You can also construct a slider with a vertical or horizontal orientation by passing the orientation in as you create it. The orientation flags are defined in the <code>Qt.</code> namespace. For example --</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.QSlider(Qt.Vertical)
+</code></pre>
+</div>
+<p>Or --</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">widget.QSlider(Qt.Horizontal)
+</code></pre>
+</div>
+<h2 id="qdial"><code>QDial</code></h2>
+<p>Finally, the <code>QDial</code> is a rotatable widget that functions just like the slider, but appears as an analogue dial. This looks nice, but from a UI perspective is not particularly user friendly. However, they are often used in audio applications as representation of real-world analogue dials.</p>
+<div class="code-block">
+<span class="code-block-language code-block-python">python</span>
+<pre><code class="python">class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("My App")
+
+        widget = QDial()
+        widget.setRange(-10, 100)
+        widget.setSingleStep(0.5)
+
+        widget.valueChanged.connect(self.value_changed)
+        widget.sliderMoved.connect(self.slider_position)
+        widget.sliderPressed.connect(self.slider_pressed)
+        widget.sliderReleased.connect(self.slider_released)
+
+        self.setCentralWidget(widget)
+
+    def value_changed(self, i):
+        print(i)
+
+    def slider_position(self, p):
+        print("position", p)
+
+    def slider_pressed(self):
+        print("Pressed!")
+
+    def slider_released(self):
+        print("Released")
+</code></pre>
+</div>
+<p>Run this and you'll see a circular dial, rotate it to select a number from the range.</p>
+<p><img alt="QDial on Windows, Mac &amp; Ubuntu Linux." src="https://www.pythonguis.com/tutorials/pyside6-widgets/widgets9.png"/>
+<em>QDial on Windows, Mac &amp; Ubuntu Linux.</em></p>
+<p>The signals are the same as for <code>QSlider</code> and retain the same names (e.g. <code>.sliderMoved</code>).</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This concludes our brief tour of the common widgets used in PySide6 applications.
+To see the full list of available widgets, including all their signals and attributes, take a look at the <a href="http://doc.qt.io/qt-5/">Qt documentation</a>.</p>
+        </div>
+
+
+        <div class="pure-g controls-container">
+            <div class="pure-button-group pure-u-1-1 center" role="group">
+
+    <span v-if="user.completed.includes(current_page_id)" class="mark-complete pure-button button-checked"
+          v-on:click="toggle_tutorial_complete(current_page_id)"
+    >Complete <i class="fas fa-check"></i></span>
+    <span v-if="!user.completed.includes(current_page_id)" class="mark-complete pure-button "
+              v-on:click="toggle_tutorial_complete(current_page_id)"
+    >Mark As Complete <i class="fas fa-magic"></i></span>
+
+
+                <a href="https://www.pythonguis.com/tutorials/pyside6-layouts/" title="Continue to next part" class="pure-button">
+                    Next
+                    <i class="fas fa-hand-point-right"></i>
+                </a>
+
+            </div>
+            <div class="pure-u-1-1">
+<div class="social-complete">
+    <p>
+        If you found this tutorial helpful, please consider sharing it with your network.
+        <br />Your support helps me to continue writing these tutorials. Thankyou!
+    </p>
+
+</div>            </div>
+        </div>
+
+
+    </article>
+
+
+
+
+
+</div>
+
+
+<div id="sidebar" class="pure-u-1-1 pure-u-md-7-24 l-box sidebar sidebar-right">
+
+
+<div class="pure-g progress-container">
+  <a href="https://www.pythonguis.com/tutorials/pyside6-signals-slots-events/" class="pure-u-1-4 pure-button progress-left"
+    title="Previous part"><i class="fas fa-angle-left"></i></a>
+
+
+  <div class="pure-u-1-2 progress-middle">
+    <div class="progress-text">3/7</div>
+    <div class="progress-bar" style="width:42.857142857142854%;"></div>
+  </div>
+
+  <a href="https://www.pythonguis.com/tutorials/pyside6-layouts/" class="pure-u-1-4 pure-button progress-right"
+    title="Next part"><i class="fas fa-angle-right"></i></a>
+</div>
+
+<div class="pure-g controls-container">
+  <div class="pure-u-1-1">
+    <span v-if="user.completed.includes(current_page_id)" class="mark-complete pure-button button-checked"
+          v-on:click="toggle_tutorial_complete(current_page_id)"
+    >Complete <i class="fas fa-check"></i></span>
+    <span v-if="!user.completed.includes(current_page_id)" class="mark-complete pure-button "
+              v-on:click="toggle_tutorial_complete(current_page_id)"
+    >Mark As Complete <i class="fas fa-magic"></i></span>
+
+  </div>
+</div>
+
+            <h4>Contents</h4>
+            <div id="toc"><ul><li><a class="toc-href" href="#a-quick-demo">A quick demo</a></li><li><a class="toc-href" href="#qlabel">QLabel</a></li><li><a class="toc-href" href="#qcheckbox">QCheckBox</a></li><li><a class="toc-href" href="#qcombobox">QComboBox</a></li><li><a class="toc-href" href="#qlistwidget">QListWidget</a></li><li><a class="toc-href" href="#qlineedit">QLineEdit</a></li><li><a class="toc-href" href="#qspinbox-and-qdoublespinbox">QSpinBox and QDoubleSpinBox</a></li><li><a class="toc-href" href="#qslider">QSlider</a></li><li><a class="toc-href" href="#qdial">QDial</a></li><li><a class="toc-href" href="#conclusion">Conclusion</a></li></ul></div>
+
+
+
+
+<h4>Share</h4>
+<ul class="post-share fa-ul">
+    <li><span class="fa-li twitter"><i class="fab fa-twitter"></i></span>
+        <a class="twitter" href="https://twitter.com/share?text=PySide6 Widgets — QCheckBox, QComboBox, QPushButton, QLabel, QSlider&amp;url=https://www.pythonguis.com%2Ftutorials/pyside6-widgets/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+         Twitter
+        </a>
+    </li>
+    <li><span class="fa-li facebook"><i class="fab fa-facebook"></i></span>
+        <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.pythonguis.com%2Ftutorials/pyside6-widgets/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+         Facebook
+        </a>
+    </li>
+    <li><span class="fa-li reddit"><i class="fab fa-reddit"></i></span>
+        <a class="reddit" href="http://www.reddit.com/submit?url=https://www.pythonguis.com%2Ftutorials/pyside6-widgets/">
+            Reddit
+        </a>
+    </li>
+
+</ul>
+
+
+</div>            </div>
+
+            <div id="container-bottom" class="pure-g">
+
+<div class="email-container pure-u-1-1">
+    <div class="email-signup">
+    <h4>Never miss an update</h4>
+    <p>Enjoyed this? Subscribe to get new updates straight in your Inbox.</p>
+
+    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/t8d2k4" data-code="t8d2k4" method="post" target="_blank">
+        <div class="pure-g">
+            <input aria-label="email" aria-required="true" type="email" class="form-control pure-u-2-3" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+            <button type="submit" class="pure-button button-subscribe pure-u-1-3">Subscribe <i class="fas fa-envelope"></i></button>
+        </div>
+        <div class="pure-g email-interest-groups">
+            <input type="hidden" name="groups[]" value="107500798">
+        </div>
+
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+        <p class="smallprint">You can unsubscribe anytime. Just ham, no spam.</p>
+    </form>
+    </div>
+</div>
+<div class="pure-u-1-1 pure-u-md-1-4 l-box">
+    <p class="metadata">
+        <strong>PySide6 Widgets</strong> was published in <a href="https://www.pythonguis.com/tutorials/">tutorials</a>
+
+        on <time datetime="2021-10-03T09:00:00+00:00">October 03, 2021</time>
+        (updated <time datetime="2022-02-02T08:32:54+00:00">February 02, 2022</time>)
+        and tagged
+<a href="https://www.pythonguis.com/topics/qt/" class="tag tag-qt">qt</a>
+
+<a href="https://www.pythonguis.com/topics/pyside/" class="tag tag-pyside tag-with-icon"><i class="fas fa-window-restore"></i>&nbsp;pyside</a>
+
+<a href="https://www.pythonguis.com/topics/pyside6/" class="tag tag-pyside6">pyside6</a>
+
+<a href="https://www.pythonguis.com/topics/widgets/" class="tag tag-widgets">widgets</a>
+
+<a href="https://www.pythonguis.com/topics/qlabel/" class="tag tag-qlabel">qlabel</a>
+
+<a href="https://www.pythonguis.com/topics/qcheckbox/" class="tag tag-qcheckbox">qcheckbox</a>
+
+<a href="https://www.pythonguis.com/topics/qcombobox/" class="tag tag-qcombobox">qcombobox</a>
+
+<a href="https://www.pythonguis.com/topics/qlistbox/" class="tag tag-qlistbox">qlistbox</a>
+
+<a href="https://www.pythonguis.com/topics/qlineedit/" class="tag tag-qlineedit">qlineedit</a>
+
+<a href="https://www.pythonguis.com/topics/qspinbox/" class="tag tag-qspinbox">qspinbox</a>
+
+<a href="https://www.pythonguis.com/topics/qdoublespinbox/" class="tag tag-qdoublespinbox">qdoublespinbox</a>
+
+<a href="https://www.pythonguis.com/topics/qslider/" class="tag tag-qslider">qslider</a>
+
+<a href="https://www.pythonguis.com/topics/qwidget/" class="tag tag-qwidget">qwidget</a>
+
+<a href="https://www.pythonguis.com/topics/python/" class="tag tag-python">python</a>
+
+<a href="https://www.pythonguis.com/topics/qt6/" class="tag tag-qt6">qt6</a>
+
+    </p>
+</div>
+<div class="pure-u-1-1 pure-u-md-3-4 l-box">
+    <div class="article-after">
+        <h4 class="continuereading">Continue reading <i class="fa fa-arrow-right"></i></h4>
+<article class="pure-g list-article">
+        <div class="pure-u-1-1">
+            <h2>
+                <a href="https://www.pythonguis.com/docs/qcombobox/" title="QComboBox">
+                    QComboBox
+                </a>
+<a href="https://www.pythonguis.com/topics/pyside/" class="tag tag-pyside tag-with-icon"><i class="fas fa-window-restore"></i>&nbsp;pyside</a>
+
+
+                <!-- <small class="timestamp">05.09.2021</small> -->
+            </h2>
+            <p>
+                The QComboBox is a simple widget for presenting a list of options to your users in PyQt, taking up the minimum amount of screen space. The widget can have a single selected item, which is displayed in the widget area. When selected a QComboBox pops out a list of possible values from which you can select. A QComboBox can also - optionally - be made editable, so your users can enter their own values onto the list of possible values.
+                <a href="https://www.pythonguis.com/docs/qcombobox/" title="QComboBox"
+                    class="continue-reading">More <i class="fa fa-hand-o-right"></i></a>
+            </p>
+        </div>
+
+</article>    </div>
+</div>
+
+            </div>
+
+
+        </div><!-- /#main -->
+
+
+        <footer class="pure-g">
+<div class="pure-u-1-1 footer-upper">
+  <div class="pure-g">
+
+    <div class="pure-u-1-1 pure-u-md-1-4">
+      <ul>
+        <li><b>Topics</b></li>
+        <li><a href="https://www.pythonguis.com/topics/pyqt/">PyQt</a></li>
+        <li><a href="https://www.pythonguis.com/topics/pyside/">PySide</a></li>
+        <li><a href="https://www.pythonguis.com/topics/packaging/">Packaging GUI applications</a></li>
+        <li><a href="https://www.pythonguis.com/topics/numpy/">NumPy</a></li>
+        <li><a href="https://www.pythonguis.com/topics/pandas/">Pandas & Datatables</a></li>
+
+      </ul>
+    </div>
+
+    <div class="pure-u-1-1 pure-u-md-1-4">
+      <ul>
+        <li><a href="/courses/installation/">Installation</a></li>
+        <li><a href="/tutorials/creating-your-first-window/">First steps with PyQt5</a></li>
+        <li><a href="/examples/">Example PyQt5 Apps</a></li>
+        <li><a href="/widgets/">Widget Library</a></li>
+        <li><a href="/docs/">PyQt / PySide documentation</a></li>
+        <li><a href="/code/">Reusable code &amp; snippets</a></li>
+        <li><a href="/faq/">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="pure-u-1-1 pure-u-md-1-4">
+      <ul>
+        <li class="important"><a href="https://account.pythonguis.com/"><i class="fas fa-download"></i> Your
+            Downloads</a></li>
+        <li><a href="/pyqt5-book/">PyQt5 Book</a> / <a href="/pyside2-book/">PySide2
+            Book</a></li>
+        <li><a href="/pyqt6-book/">PyQt6 Book</a> / <a href="/pyside6-book/">PySide6
+            Book</a></li>
+        <li><a href="/books/downloads/"><i class="fas fa-code"></i> Book Source Code</a></li>
+        <li><a href="/pyqt5-tutorial/">PyQt5 tutorial</a></li>
+        <li><a href="/pyqt6-tutorial/">PyQt6 tutorial</a></li>
+        <li><a href="/pyside2-tutorial/">PySide2 tutorial</a></li>
+        <li><a href="/pyside6-tutorial/">PySide6 tutorial</a></li>
+        <li><a href="/blog/">Latest articles</a></li>
+      </ul>
+    </div>
+
+    <div class="pure-u-1-1 pure-u-md-1-4">
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/hire/">Hire me</a></li>
+        <li><a href="/live/">1-on-1 mentoring</a></li>
+        <li><a href="/write/">Write with me</a></li>
+        <li><a href="https://a.paddle.com/join/program/16090">Become an affiliate</a></li>
+        <li><a href="/contact/">Contact me</a></li>
+        <li><a href="/legal/">Licensing, Privacy & Legal</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+  <div class="pure-u-1-1 footer-final">
+<div class="pure-u-1-1 social-links">
+    <p class="social-links-notice">Follow us for new tutorials</p>
+    <div class="subscribe-social-links">
+        <a href="https://twitter.com/pythonguis" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/pythonguis" class="github"><i class="fab fa-github-alt"></i></a>
+        <a href="https://www.facebook.com/pythonguis" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCxrMH7EtSIQX2ivppTWZXfg" class="youtube"><i
+                class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/company/pythonguis/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>    <p>
+      <a href="https://www.pythonguis.com/">Python GUIs</a>
+      Copyright &copy;2014-2022
+      <a href="https://www.mfitzp.com"> Martin Fitzpatrick</a>
+    </p>
+    <p>
+      Tutorials CC-BY-NC-SA
+      <i class="fab fa-creative-commons"></i>
+      <i class="fab fa-creative-commons-by"></i>
+      <i class="fab fa-creative-commons-nc"></i>
+      <i class="fab fa-creative-commons-sa"></i>
+      &nbsp;
+      <a href="/sitemap/">Sitemap</a>
+      &nbsp;
+      Public code <a href="https://opensource.org/licenses/BSD-2-Clause" rel="nofollow">BSD</a> & <a
+        href="https://opensource.org/licenses/MIT" rel="nofollow">MIT</a>
+    </p>
+  </div>
+        </footer>
+
+
+
+
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+    <script type="text/javascript"
+        src="https://unpkg.com/vue-observe-visibility@0.4.6/dist/vue-observe-visibility.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>
+
+    <script type="text/javascript">
+
+var localizedDiscount = {'WE5GY0': 50, 'DQ3JY5': 35};
+
+var vm = new Vue({
+  delimiters: ['[[', ']]'],
+  el: '#app',
+  data: {
+    user: {
+        completed: []
+    },
+    staticurl: 'https://www.pythonguis.com/',
+    siteurl: 'https://www.pythonguis.com/',
+    apiurl: 'https://api.pythonguis.com',
+    hidden: ['installation'],
+    landed: document.referrer != 'https://www.pythonguis.com/',
+    // video
+    video: '',
+    affiliateId: '',
+    is_video_loaded: false,
+    countryCode: '',
+    countryRegion: '',
+    activeDiscount: false,
+    couponCode: false,
+    localizedPrices: false,
+    comments: false,
+    curriculum: [],
+    current_page_id: null,
+    current_course: null,
+    courses: {
+            'pyqt6-example-browser':{"id": "pyqt6-example-browser", "url": "courses/pyqt6-example-browser/", "title": "Mozzarella Ashbadger", "subtitle": "Build your own tabbed web browser with PyQt6", "content": "<p>Now we've learnt the basics, we'll put it into practice building a real-life app.\nIn this course we'll create a functional web browser using PyQt6 widgets.\nStarting with the basics and then gradually extending it to add features like opening and saving pages, help,\nprinting and tabbed browsing. Follow the tutorial step by step to create\nyour own app, but feel free to experiment as you go.</p>", "image": "images/courses/example-browser.jpg", "first_child": null, "n_videos": 0, "n_tutorials": 0, "is_collapsed": null, "items": []},
+            'pyqt6-model-views':{"id": "pyqt6-model-views", "url": "courses/pyqt6-model-views/", "title": "ModelViews and Databases", "subtitle": "Connecting your PyQt6 application to data sources", "content": "<p>All but the simplest of apps will usually need to interact with some kind of external data store &mdash;\nwhether that's a database, a remote API or simple configuration data. The Qt ModelView architecture\nsimplifies the linking and updating your UI with data in custom formats or from external sources. In\nthis PyQt6 tutorial we'll discover how you can use Qt ModelViews to build high performance Python GUIs.</p>", "image": "images/courses/qt/modelviews.png", "first_child": "tutorials/pyqt6-modelview-architecture/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyqt6-modelview-architecture", "title": "The ModelView Architecture", "subtitle": "Qt's MVC-like interface for displaying data in views", "url": "tutorials/pyqt6-modelview-architecture/", "duration": "12:42", "is_premium": false, "has_video": false}, {"id": "pyqt6-qtableview-modelviews-numpy-pandas", "title": "Displaying tabular data in Qt6 ModelViews", "subtitle": "Create customized table views with conditional formatting, numpy and pandas data sources.", "url": "tutorials/pyqt6-qtableview-modelviews-numpy-pandas/", "duration": "17:25", "is_premium": false, "has_video": false}]},
+            'pyqt6-advanced-ui-features':{"id": "pyqt6-advanced-ui-features", "url": "courses/pyqt6-advanced-ui-features/", "title": "Extended UI features", "subtitle": "Extending your apps with complex GUI behaviour", "content": "<p>In this PyQt6 tutorial we'll cover some advanced features of Qt that you can use to improve\nyour Python GUIs.</p>", "image": "images/courses/systemtray.jpg", "first_child": "tutorials/pyqt6-transmitting-extra-data-qt-signals/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyqt6-transmitting-extra-data-qt-signals", "title": "Transmitting extra data with Qt Signals", "subtitle": "Modifying widget signals to pass contextual information to slots", "url": "tutorials/pyqt6-transmitting-extra-data-qt-signals/", "duration": "06:06", "is_premium": false, "has_video": false}, {"id": "pyqt6-system-tray-mac-menu-bar-applications", "title": "System tray & Mac menu bar applications", "subtitle": "Add quick access functions to your apps", "url": "tutorials/pyqt6-system-tray-mac-menu-bar-applications/", "duration": "03:45", "is_premium": false, "has_video": false}]},
+            'pyqt6-qgraphics':{"id": "pyqt6-qgraphics", "url": "courses/pyqt6-qgraphics/", "title": "QGraphics Framework", "subtitle": "Vector graphic interfaces", "content": "<p>The PyQt6 Graphics View framework is a scene-based vector graphics API. Using this you can create dynamic interactive interfaces for anything from vector graphics tools, data analysis workflow designers to simple 2D games.\nThe Graphics View Framework allows you to develop fast &amp; efficient scenes, containing millions of items, each with their own distinct graphic features and behaviors.</p>", "image": "images/courses/qgraphics.png", "first_child": "tutorials/pyqt6-qgraphics-vector-graphics/", "n_videos": 0, "n_tutorials": 1, "is_collapsed": null, "items": [{"id": "pyqt6-qgraphics-vector-graphics", "title": "Introduction to the QGraphics framework", "subtitle": "Creating vector interfaces using the QGraphics View framework", "url": "tutorials/pyqt6-qgraphics-vector-graphics/", "duration": "12:52", "is_premium": false, "has_video": false}]},
+            'pyqt6-graphics-plotting':{"id": "pyqt6-graphics-plotting", "url": "courses/pyqt6-graphics-plotting/", "title": "Graphics and Plotting", "subtitle": "Vector graphics and plotting using PyQtGraph in PyQt6", "content": "<p>Python is one of the most popular languages in the data science and machine learning fields. Effective visualization of data is a key part of building usable interfaces for data science. Matplotlib is the most popular plotting library in Python, and comes with support for PyQt6 built in. In addition, there are PyQt6-specific plotting options available such as PyQtGraph which provide a better interactive experience. In this tutorial we'll look at these alternatives and build some simple plot interfaces.</p>", "image": "images/courses/qt/plotting.png", "first_child": null, "n_videos": 0, "n_tutorials": 0, "is_collapsed": null, "items": []},
+            'pyqt6-packaging-and-distribution':{"id": "pyqt6-packaging-and-distribution", "url": "courses/pyqt6-packaging-and-distribution/", "title": "Packaging and distribution", "subtitle": "Sharing your awesome PyQt6 applications with other people", "content": "<p>There comes a point in any app's development where it needs to leave home &mdash; half the fun in writing software is being able to share it with other people. Packaging Python GUI apps can be a little tricky, but in this PyQt6 tutorial we'll cover how to package up your apps to share, whether commercially or just for fun.</p>", "image": "images/courses/qt/installer.png", "first_child": "tutorials/packaging-pyqt6-applications-windows-pyinstaller/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "packaging-pyqt6-applications-windows-pyinstaller", "title": "Packaging PyQt6 applications for Windows with PyInstaller & InstallForge", "subtitle": "Turn your PyQt6 application into a distributable installer for Windows", "url": "tutorials/packaging-pyqt6-applications-windows-pyinstaller/", "duration": "23:28", "is_premium": false, "has_video": false}, {"id": "packaging-pyqt6-applications-pyinstaller-macos-dmg", "title": "Packaging PyQt6 applications into a macOS app with PyInstaller", "subtitle": "Turn your PyQt6 application into a distributable app", "url": "tutorials/packaging-pyqt6-applications-pyinstaller-macos-dmg/", "duration": "23:32", "is_premium": false, "has_video": false}]},
+            'pyqt6-concurrent-execution':{"id": "pyqt6-concurrent-execution", "url": "courses/pyqt6-concurrent-execution/", "title": "Threads & Processes", "subtitle": "Run concurrent tasks without impacting your PyQt6 UI", "content": "<p>As your applications become more complex you may finding yourself wanting to perform long-running tasks, such as interacting with remote APIs or performing complex calculations. By default any code you write exists in the same thread and process, meaning your long-running code can actually block Qt execution and cause your Python GUI app to \"hang\". In this PyQt6 tutorial we'll cover how to avoid this happening and keep your applications running smoothly, no matter the workload.</p>", "image": "images/courses/qt/concurrent.png", "first_child": "tutorials/multithreading-pyqt6-applications-qthreadpool/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "multithreading-pyqt6-applications-qthreadpool", "title": "Multithreading PyQt6 applications with QThreadPool", "subtitle": "Run background tasks concurrently without impacting your UI", "url": "tutorials/multithreading-pyqt6-applications-qthreadpool/", "duration": "12:39", "is_premium": false, "has_video": false}, {"id": "pyqt6-qprocess-external-programs", "title": "Using QProcess to run external programs", "subtitle": "Run background programs without impacting your UI", "url": "tutorials/pyqt6-qprocess-external-programs/", "duration": "10:26", "is_premium": false, "has_video": false}]},
+            'pyqt6-qt-designer':{"id": "pyqt6-qt-designer", "url": "courses/pyqt6-qt-designer/", "title": "Creating applications with Qt Designer", "subtitle": "Using the drag-drop designer to develop your PyQt6 apps", "content": "<p>As your applications get larger or interfaces become more complicated, it can get a bit cumbersome to\ndefine all elements programmatically. The good news is that Qt comes with a graphical editor Qt Designer (or Qt Creator)\nwhich contains a drag-and-drop UI editor &mdash; Qt Designer. In this PyQt6 tutorial we'll cover the basics\nof creating Python GUIs with Qt Designer.</p>", "image": "images/courses/qt/designer.png", "first_child": "tutorials/pyqt6-first-steps-qt-designer/", "n_videos": 0, "n_tutorials": 4, "is_collapsed": null, "items": [{"id": "pyqt6-first-steps-qt-designer", "title": "First steps with Qt Designer", "subtitle": "Use Qt Designer's drag and drop interface to design your PyQt6 GUI", "url": "tutorials/pyqt6-first-steps-qt-designer/", "duration": "06:58", "is_premium": false, "has_video": false}, {"id": "pyqt6-qt-designer-gui-layout", "title": "Laying Out Your PyQt6 GUIs With Qt Designer", "subtitle": "Use Qt Designer to effortlessly build your application UI", "url": "tutorials/pyqt6-qt-designer-gui-layout/", "duration": "12:52", "is_premium": false, "has_video": false}, {"id": "pyqt6-creating-dialogs-qt-designer", "title": "Creating Dialogs With Qt Designer", "subtitle": "Using the drag and drop editor to build PyQt6 dialogs", "url": "tutorials/pyqt6-creating-dialogs-qt-designer/", "duration": "17:08", "is_premium": false, "has_video": false}, {"id": "pyqt6-embed-pyqtgraph-custom-widgets-qt-app", "title": "Embedding custom widgets from Qt Designer", "subtitle": "Learn how to use custom widgets in your PyQt6 applications when designing with Qt Designer", "url": "tutorials/pyqt6-embed-pyqtgraph-custom-widgets-qt-app/", "duration": "05:12", "is_premium": false, "has_video": false}]},
+            'pyqt6-custom-widgets':{"id": "pyqt6-custom-widgets", "url": "courses/pyqt6-custom-widgets/", "title": "Custom Widgets", "subtitle": "Designing your own custom widgets in PyQt6", "content": "<p>Widgets in Qt are built on bitmap graphics &mdash; drawing pixels on a rectangular canvas to\nconstruct the \"widget\". To be able to create your own custom widgets you first need to understand\nhow the <code>QPainter</code> system works and what you can do with it. In this PyQt6 tutorial we'll go\nfrom basic bitmap graphics to our own entirely custom widget.</p>", "image": "images/courses/qt/custom-widgets.png", "first_child": "tutorials/pyqt6-bitmap-graphics/", "n_videos": 0, "n_tutorials": 3, "is_collapsed": null, "items": [{"id": "pyqt6-bitmap-graphics", "title": "QPainter and Bitmap Graphics", "subtitle": "Introduction to the core features of QPainter", "url": "tutorials/pyqt6-bitmap-graphics/", "duration": "15:47", "is_premium": false, "has_video": false}, {"id": "pyqt6-creating-your-own-custom-widgets", "title": "Creating custom GUI widgets in PyQt6", "subtitle": "Build a completely functional custom widget from scratch using QPainter", "url": "tutorials/pyqt6-creating-your-own-custom-widgets/", "duration": "19:10", "is_premium": false, "has_video": false}, {"id": "pyqt6-animated-widgets", "title": "Animating custom widgets with QPropertyAnimation", "subtitle": "Add dynamic visual effects to your custom widgets", "url": "tutorials/pyqt6-animated-widgets/", "duration": "14:55", "is_premium": false, "has_video": false}]},
+            'pyqt6-start':{"id": "pyqt6-start", "url": "courses/pyqt6-start/", "title": "Getting started with PyQt6", "subtitle": "Take your first steps building apps with Python & Qt6", "content": "<p>Like writing any code, building PyQt6 applications is all about approaching it in the right way. In the first part of the course we cover the fundamentals necessary to get you building Python GUIs as quickly as possible. By the end of the first part you'll have a running <code>QApplication</code> which we can then customize.</p>", "image": "images/courses/helloworld_JeRwi1P.jpg", "first_child": "tutorials/pyqt6-creating-your-first-window/", "n_videos": 1, "n_tutorials": 6, "is_collapsed": null, "items": [{"id": "pyqt6-creating-your-first-window", "title": "Creating your first app with PyQt6", "subtitle": "A simple Hello World! application with Python and Qt6", "url": "tutorials/pyqt6-creating-your-first-window/", "duration": "07:25", "is_premium": false, "has_video": true}, {"id": "pyqt6-signals-slots-events", "title": "PyQt6 Signals, Slots & Events", "subtitle": "Triggering actions in response to user behaviors and GUI events", "url": "tutorials/pyqt6-signals-slots-events/", "duration": "13:15", "is_premium": false, "has_video": false}, {"id": "pyqt6-widgets", "title": "PyQt6 Widgets", "subtitle": "Using Qt6's library of built-in widgets to build your applications", "url": "tutorials/pyqt6-widgets/", "duration": "12:02", "is_premium": false, "has_video": false}, {"id": "pyqt6-layouts", "title": "PyQt6 Layouts", "subtitle": "Use layouts to effortlessly position widgets within the window", "url": "tutorials/pyqt6-layouts/", "duration": "08:22", "is_premium": false, "has_video": false}, {"id": "pyqt6-actions-toolbars-menus", "title": "PyQt6 Toolbars & Menus \u2014 QAction", "subtitle": "Defining toolbars, menus and keyboard shortcuts with QAction", "url": "tutorials/pyqt6-actions-toolbars-menus/", "duration": "12:08", "is_premium": false, "has_video": false}, {"id": "pyqt6-dialogs", "title": "PyQt6 Dialogs and Alerts", "subtitle": "Notify your users and ask for their input", "url": "tutorials/pyqt6-dialogs/", "duration": "08:52", "is_premium": false, "has_video": false}, {"id": "pyqt6-creating-multiple-windows", "title": "Creating additional windows", "subtitle": "Opening new windows for your application", "url": "tutorials/pyqt6-creating-multiple-windows/", "duration": "08:47", "is_premium": false, "has_video": false}]},
+            'qt-quick':{"id": "qt-quick", "url": "courses/qt-quick/", "title": "QtQuick & QML", "subtitle": "Building modern PyQt5 GUIs with QtQuick & QML", "content": "<p>Qt Quick is Qt's declarative UI design system, using the Qt Modeling Language (QML) to define custom user interfaces. Originally developed for use in mobile applications, it offers dynamic graphical elements and fluid transitions and effects allowing you to replicate the kinds of UIs you find on mobile devices. Qt Quick is supported on all desktop platforms too and is a great choice for building desktop widgets or other interactive tools. Qt Quick is also a great choice for developing UIs for hardware and microcontrollers with PyQt5.</p>", "image": "images/courses/qml.jpg", "first_child": "tutorials/qml-qtquick-python-application/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "qml-qtquick-python-application", "title": "Create applications with QtQuick", "subtitle": "Build modern applications with declarative QML", "url": "tutorials/qml-qtquick-python-application/", "duration": "14:49", "is_premium": false, "has_video": false}, {"id": "qml-animations-transformations", "title": "Animations and Transformations with QtQuick", "subtitle": "Building an animated analog clock in QML", "url": "tutorials/qml-animations-transformations/", "duration": "13:25", "is_premium": false, "has_video": false}]},
+            'pyside6-qt-quick':{"id": "pyside6-qt-quick", "url": "courses/pyside6-qt-quick/", "title": "QtQuick & QML", "subtitle": "Building modern PySide6 GUIs with QtQuick & QML", "content": "<p>Qt Quick is Qt's declarative UI design system, using the Qt Modeling Language (QML) to define custom user interfaces. Originally developed for use in mobile applications, it offers dynamic graphical elements and fluid transitions and effects allowing you to replicate the kinds of UIs you find on mobile devices. Qt Quick is supported on all desktop platforms too and is a great choice for building desktop widgets or other interactive tools. Qt Quick is also a great choice for developing UIs for hardware and microcontrollers with PySide6.</p>", "image": "images/courses/qml.jpg", "first_child": "tutorials/pyside6-qml-qtquick-python-application/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside6-qml-qtquick-python-application", "title": "Create applications with QtQuick", "subtitle": "Build modern applications with declarative QML", "url": "tutorials/pyside6-qml-qtquick-python-application/", "duration": "14:43", "is_premium": false, "has_video": false}, {"id": "pyside6-qml-animations-transformations", "title": "Animations and Transformations with QtQuick", "subtitle": "Building an animated analog clock in QML", "url": "tutorials/pyside6-qml-animations-transformations/", "duration": "13:24", "is_premium": false, "has_video": false}]},
+            'pyside-qt-quick':{"id": "pyside-qt-quick", "url": "courses/pyside-qt-quick/", "title": "QtQuick & QML", "subtitle": "Building modern PySide2 GUIs with QtQuick & QML", "content": "<p>Qt Quick is Qt's declarative UI design system, using the Qt Modeling Language (QML) to define custom user interfaces. Originally developed for use in mobile applications, it offers dynamic graphical elements and fluid transitions and effects allowing you to replicate the kinds of UIs you find on mobile devices. Qt Quick is supported on all desktop platforms too and is a great choice for building desktop widgets or other interactive tools. Qt Quick is also a great choice for developing UIs for hardware and microcontrollers with PySide2.</p>", "image": "images/courses/qml.jpg", "first_child": "tutorials/pyside-qml-qtquick-python-application/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside-qml-qtquick-python-application", "title": "Create applications with QtQuick", "subtitle": "Build modern applications with declarative QML", "url": "tutorials/pyside-qml-qtquick-python-application/", "duration": "14:43", "is_premium": false, "has_video": false}, {"id": "pyside-qml-animations-transformations", "title": "Animations and Transformations with QtQuick", "subtitle": "Building an animated analog clock in QML", "url": "tutorials/pyside-qml-animations-transformations/", "duration": "13:24", "is_premium": false, "has_video": false}]},
+            'pyqt6-qt-quick':{"id": "pyqt6-qt-quick", "url": "courses/pyqt6-qt-quick/", "title": "QtQuick & QML", "subtitle": "Building modern PyQt6 GUIs with QtQuick & QML", "content": "<p>Qt Quick is Qt's declarative UI design system, using the Qt Modeling Language (QML) to define custom user interfaces. Originally developed for use in mobile applications, it offers dynamic graphical elements and fluid transitions and effects allowing you to replicate the kinds of UIs you find on mobile devices. Qt Quick is supported on all desktop platforms too and is a great choice for building desktop widgets or other interactive tools. Qt Quick is also a great choice for developing UIs for hardware and microcontrollers with PyQt6.</p>", "image": "images/courses/qml.jpg", "first_child": "tutorials/pyqt6-qml-qtquick-python-application/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyqt6-qml-qtquick-python-application", "title": "Create applications with QtQuick", "subtitle": "Build modern applications with declarative QML", "url": "tutorials/pyqt6-qml-qtquick-python-application/", "duration": "14:49", "is_premium": false, "has_video": false}, {"id": "pyqt6-qml-animations-transformations", "title": "Animations and Transformations with QtQuick", "subtitle": "Building an animated analog clock in QML", "url": "tutorials/pyqt6-qml-animations-transformations/", "duration": "13:25", "is_premium": false, "has_video": false}]},
+            'pyside-concurrent-execution':{"id": "pyside-concurrent-execution", "url": "courses/pyside-concurrent-execution/", "title": "Threads & Processes", "subtitle": "Run concurrent tasks without impacting your PySide UI", "content": "<p>As your applications become more complex you may finding yourself wanting to perform long-running tasks, such as interacting with remote APIs or performing complex calculations. By default any code you write exists in the same thread and process, meaning your long-running code can actually block Qt execution and cause your Python GUI app to \"hang\". In this PySide tutorial we'll cover how to avoid this happening and keep your applications running smoothly, no matter the workload.</p>", "image": "images/courses/qt/concurrent.png", "first_child": "tutorials/multithreading-pyside-applications-qthreadpool/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "multithreading-pyside-applications-qthreadpool", "title": "Multithreading PySide2 applications with QThreadPool", "subtitle": "Run background tasks concurrently without impacting your UI", "url": "tutorials/multithreading-pyside-applications-qthreadpool/", "duration": "12:49", "is_premium": false, "has_video": false}, {"id": "pyside-qprocess-external-programs", "title": "Using QProcess to run external programs", "subtitle": "Run background programs without impacting your UI", "url": "tutorials/pyside-qprocess-external-programs/", "duration": "10:24", "is_premium": false, "has_video": false}]},
+            'pyside-model-views':{"id": "pyside-model-views", "url": "courses/pyside-model-views/", "title": "ModelViews and Databases", "subtitle": "Connecting your PySide application to data sources", "content": "<p>All but the simplest of apps will usually need to interact with some kind of external data store &mdash;\nwhether that's a database, a remote API or simple configuration data. The Qt ModelView architecture\nsimplifies the linking and updating your UI with data in custom formats or from external sources. In\nthis PySide tutorial we'll discover how you can use Qt ModelViews to build high performance Python GUIs.</p>", "image": "images/courses/qt/modelviews.png", "first_child": "tutorials/pyside-modelview-architecture/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside-modelview-architecture", "title": "The ModelView Architecture", "subtitle": "Qt's MVC-like interface for displaying data in views", "url": "tutorials/pyside-modelview-architecture/", "duration": "12:31", "is_premium": false, "has_video": false}, {"id": "pyside-qtableview-modelviews-numpy-pandas", "title": "Displaying tabular data in Qt ModelViews", "subtitle": "Create customized table views with conditional formatting, numpy and pandas data sources.", "url": "tutorials/pyside-qtableview-modelviews-numpy-pandas/", "duration": "17:12", "is_premium": false, "has_video": false}]},
+            'pyside-qt-designer':{"id": "pyside-qt-designer", "url": "courses/pyside-qt-designer/", "title": "Creating applications with Qt Designer", "subtitle": "Using the drag-drop designer to develop your PySide apps", "content": "<p>As your applications get larger or interfaces become more complicated, it can get a bit cumbersome to\ndefine all elements programmatically. The good news is that Qt comes with a graphical editor Qt Designer (or Qt Creator)\nwhich contains a drag-and-drop UI editor &mdash; Qt Designer. In this PySide tutorial we'll cover the basics\nof creating Python GUIs with Qt Designer.</p>", "image": "images/courses/qt/designer.png", "first_child": "tutorials/pyside-first-steps-qt-designer/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside-first-steps-qt-designer", "title": "First steps with Qt Designer", "subtitle": "Use Qt Designer's drag and drop interface to design your GUI", "url": "tutorials/pyside-first-steps-qt-designer/", "duration": "07:13", "is_premium": false, "has_video": false}, {"id": "pyside-qresource-system", "title": "The QResource System", "subtitle": "Using the QResource system to package additional data with your applications", "url": "tutorials/pyside-qresource-system/", "duration": "08:34", "is_premium": false, "has_video": false}]},
+            'pyside-plotting':{"id": "pyside-plotting", "url": "courses/pyside-plotting/", "title": "Graphics and Plotting", "subtitle": "Vector graphics and plotting using PyQtGraph in PySide", "content": "<p>Python is one of the most popular languages in the data science and machine learning fields. Effective visualization of data is a key part of building usable interfaces for data science. Matplotlib is the most popular plotting library in Python, and comes with support for PyQt built in. In addition, there are PyQt-specific plotting options available such as PyQtGraph which provide a better interactive experience. In this tutorial we'll look at these alternatives and build some simple plot interfaces.</p>", "image": "images/courses/qt/plotting.png", "first_child": "tutorials/pyside-plotting-pyqtgraph/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside-plotting-pyqtgraph", "title": "Plotting with PyQtGraph", "subtitle": "Create custom plots in PySide with PyQtGraph", "url": "tutorials/pyside-plotting-pyqtgraph/", "duration": "14:19", "is_premium": false, "has_video": false}, {"id": "pyside-plotting-matplotlib", "title": "Plotting with Matplotlib", "subtitle": "Create PySide plots with the popular Python plotting library", "url": "tutorials/pyside-plotting-matplotlib/", "duration": "11:59", "is_premium": false, "has_video": false}]},
+            'pyside-advanced-features':{"id": "pyside-advanced-features", "url": "courses/pyside-advanced-features/", "title": "Extended UI features", "subtitle": "Extending your PySide apps with complex GUI behaviour", "content": "<p>In this PySide tutorial we'll cover some advanced features of Qt that you can use to improve\nyour Python GUIs.</p>", "image": "images/courses/systemtray.jpg", "first_child": "tutorials/pyside-transmitting-extra-data-qt-signals/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside-transmitting-extra-data-qt-signals", "title": "Transmitting extra data with Qt Signals", "subtitle": "Modifying widget signals to pass contextual information to slots", "url": "tutorials/pyside-transmitting-extra-data-qt-signals/", "duration": "06:05", "is_premium": false, "has_video": false}, {"id": "pyside-system-tray-mac-menu-bar-applications", "title": "System tray & Mac menu bar applications", "subtitle": "Add quick access functions to your apps", "url": "tutorials/pyside-system-tray-mac-menu-bar-applications/", "duration": "03:31", "is_premium": false, "has_video": false}]},
+            'pyside-getting-started':{"id": "pyside-getting-started", "url": "courses/pyside-getting-started/", "title": "Getting started with PySide", "subtitle": "Take your first steps building Python & Qt5 apps with PySide", "content": "<p>Like writing any code, building PySide applications is all about approaching it in the right way. In the first part of the course we cover the fundamentals necessary to get you building Python GUIs as quickly as possible. By the end of the first part you'll have a running <code>QApplication</code> which we can then customize.</p>", "image": "images/courses/helloworld_JeRwi1P.jpg", "first_child": "tutorials/pyside-creating-your-first-window/", "n_videos": 0, "n_tutorials": 7, "is_collapsed": null, "items": [{"id": "pyside-creating-your-first-window", "title": "Creating your first app with PySide2", "subtitle": "A simple Hello World! application with Python and Qt", "url": "tutorials/pyside-creating-your-first-window/", "duration": "07:33", "is_premium": false, "has_video": false}, {"id": "pyside-signals-slots-events", "title": "PySide2 Signals, Slots & Events", "subtitle": "Triggering actions in response to user behaviors and GUI events", "url": "tutorials/pyside-signals-slots-events/", "duration": "10:00", "is_premium": true, "has_video": false}, {"id": "pyside-widgets", "title": "PySide2 Widgets", "subtitle": "Using PySide2's built-in widgets to build your applications", "url": "tutorials/pyside-widgets/", "duration": "20:00", "is_premium": true, "has_video": false}, {"id": "pyside-layouts", "title": "PySide2 Layouts", "subtitle": "Use layouts to effortlessly position widgets within the window", "url": "tutorials/pyside-layouts/", "duration": "18:00", "is_premium": true, "has_video": false}, {"id": "pyside-actions-toolbars-menus", "title": "PySide2 Toolbars & Menus \u2014 QAction", "subtitle": "Defining toolbars, menus and keyboard shortcuts with QAction", "url": "tutorials/pyside-actions-toolbars-menus/", "duration": "12:00", "is_premium": true, "has_video": false}, {"id": "pyside-dialogs", "title": "PySide2 Dialogs and Alerts", "subtitle": "Notify your users and ask for their input", "url": "tutorials/pyside-dialogs/", "duration": "05:00", "is_premium": true, "has_video": false}, {"id": "pyside-creating-multiple-windows", "title": "Creating additional windows", "subtitle": "Opening new windows for your application", "url": "tutorials/pyside-creating-multiple-windows/", "duration": "08:47", "is_premium": false, "has_video": false}]},
+            'pyside-packaging-and-distribution':{"id": "pyside-packaging-and-distribution", "url": "courses/pyside-packaging-and-distribution/", "title": "Packaging and distribution", "subtitle": "Sharing your PySide applications with other people", "content": "<p>There comes a point in any app's development where it needs to leave home &mdash; half the fun in writing software is being able to share it with other people. Packaging Python GUI apps can be a little tricky, but in this PySide tutorial we'll cover how to package up your apps to share, whether commercially or just for fun.</p>", "image": "images/courses/qt/installer.png", "first_child": "tutorials/packaging-pyside2-applications-windows-pyinstaller/", "n_videos": 0, "n_tutorials": 4, "is_collapsed": null, "items": [{"id": "packaging-pyside2-applications-windows-pyinstaller", "title": "Packaging PySide2 applications for Windows with PyInstaller & InstallForge", "subtitle": "Turn your PySide2 application into a distributable installer for Windows", "url": "tutorials/packaging-pyside2-applications-windows-pyinstaller/", "duration": "23:42", "is_premium": false, "has_video": false}, {"id": "packaging-pyside2-applications-pyinstaller-macos-dmg", "title": "Packaging PySide2 applications into a macOS app with PyInstaller", "subtitle": "Turn your PySide2 application into a distributable app", "url": "tutorials/packaging-pyside2-applications-pyinstaller-macos-dmg/", "duration": "23:32", "is_premium": false, "has_video": false}, {"id": "packaging-data-files-pyside2-with-qresource-system", "title": "Using QResource to package data files with PyInstaller", "subtitle": "Serialize data files for easy packaging in Python", "url": "tutorials/packaging-data-files-pyside2-with-qresource-system/", "duration": "15:53", "is_premium": false, "has_video": false}, {"id": "pyside-packaging-apps-fbs", "title": "Packaging PySide apps with fbs", "subtitle": "Distribute cross-platform GUI applications with the fman Build System", "url": "tutorials/pyside-packaging-apps-fbs/", "duration": "13:19", "is_premium": false, "has_video": false}]},
+            'pyside-custom-widgets':{"id": "pyside-custom-widgets", "url": "courses/pyside-custom-widgets/", "title": "Custom Widgets", "subtitle": "Designing your own custom widgets in PySide", "content": "<p>Widgets in Qt are built on bitmap graphics &mdash; drawing pixels on a rectangular canvas to\nconstruct the \"widget\". To be able to create your own custom widgets you first need to understand\nhow the <code>QPainter</code> system works and what you can do with it. In this PySide tutorial we'll go\nfrom basic bitmap graphics to our own entirely custom widget.</p>", "image": "images/courses/qt/custom-widgets.png", "first_child": "tutorials/pyside-bitmap-graphics/", "n_videos": 0, "n_tutorials": 3, "is_collapsed": null, "items": [{"id": "pyside-bitmap-graphics", "title": "QPainter and Bitmap Graphics", "subtitle": "Introduction to the core features of QPainter", "url": "tutorials/pyside-bitmap-graphics/", "duration": "16:15", "is_premium": false, "has_video": false}, {"id": "pyside-creating-your-own-custom-widgets", "title": "Creating custom GUI widgets in PySide2", "subtitle": "Build a completely functional custom widget from scratch using QPainter", "url": "tutorials/pyside-creating-your-own-custom-widgets/", "duration": "19:08", "is_premium": false, "has_video": false}, {"id": "pyside-animated-widgets", "title": "Animating custom widgets with QPropertyAnimation", "subtitle": "Add dynamic visual effects to your custom widgets", "url": "tutorials/pyside-animated-widgets/", "duration": "14:53", "is_premium": false, "has_video": false}]},
+            'packaging-and-distribution':{"id": "packaging-and-distribution", "url": "courses/packaging-and-distribution/", "title": "Packaging and distribution", "subtitle": "Sharing your awesome applications with other people", "content": "<p>There comes a point in any app's development where it needs to leave home &mdash; half the fun in writing software is being able to share it with other people. Packaging Python GUI apps can be a little tricky, but in this PyQt5 tutorial we'll cover how to package up your apps to share, whether commercially or just for fun.</p>", "image": "images/courses/qt/installer.png", "first_child": "tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/", "n_videos": 0, "n_tutorials": 4, "is_collapsed": null, "items": [{"id": "packaging-pyqt5-pyside2-applications-windows-pyinstaller", "title": "Packaging PyQt5 applications for Windows with PyInstaller & InstallForge", "subtitle": "Turn your PyQt5 application into a distributable installer for Windows", "url": "tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/", "duration": "23:33", "is_premium": false, "has_video": false}, {"id": "packaging-pyqt5-applications-pyinstaller-macos-dmg", "title": "Packaging PyQt5 applications into a macOS app with PyInstaller", "subtitle": "Turn your PyQt5 application into a distributable app", "url": "tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/", "duration": "23:32", "is_premium": false, "has_video": false}, {"id": "packaging-data-files-pyqt5-with-qresource-system", "title": "Using QResource to package data files with PyInstaller", "subtitle": "Serialize data files for easy packaging in Python", "url": "tutorials/packaging-data-files-pyqt5-with-qresource-system/", "duration": "16:40", "is_premium": false, "has_video": false}, {"id": "packaging-pyqt5-apps-fbs", "title": "Packaging PyQt5 apps with fbs", "subtitle": "Distribute cross-platform GUI applications with the fman Build System", "url": "tutorials/packaging-pyqt5-apps-fbs/", "duration": "13:29", "is_premium": false, "has_video": false}]},
+            'model-views':{"id": "model-views", "url": "courses/model-views/", "title": "ModelViews and Databases", "subtitle": "Connecting your application to data sources", "content": "<p>All but the simplest of apps will usually need to interact with some kind of external data store &mdash;\nwhether that's a database, a remote API or simple configuration data. The Qt ModelView architecture\nsimplifies the linking and updating your UI with data in custom formats or from external sources. In\nthis PyQt5 tutorial we'll discover how you can use Qt ModelViews to build high performance Python GUIs.</p>", "image": "images/courses/qt/modelviews.png", "first_child": "tutorials/modelview-architecture/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "modelview-architecture", "title": "The ModelView Architecture", "subtitle": "Qt's MVC-like interface for displaying data in views", "url": "tutorials/modelview-architecture/", "duration": "12:38", "is_premium": false, "has_video": false}, {"id": "qtableview-modelviews-numpy-pandas", "title": "Displaying tabular data in Qt5 ModelViews", "subtitle": "Create customized table views with conditional formatting, numpy and pandas data sources.", "url": "tutorials/qtableview-modelviews-numpy-pandas/", "duration": "17:12", "is_premium": false, "has_video": false}]},
+            'start':{"id": "start", "url": "courses/start/", "title": "Getting started with PyQt5", "subtitle": "Take your first steps building apps with Python & Qt5", "content": "<p>Like writing any code, building PyQt5 applications is all about approaching it in the right way. In the first part of the course we cover the fundamentals necessary to get you building Python GUIs as quickly as possible. By the end of the first part you'll have a running <code>QApplication</code> which we can then customize.</p>", "image": "images/courses/helloworld_JeRwi1P.jpg", "first_child": "tutorials/creating-your-first-pyqt-window/", "n_videos": 1, "n_tutorials": 6, "is_collapsed": null, "items": [{"id": "creating-your-first-pyqt-window", "title": "Creating your first app with PyQt5", "subtitle": "A simple Hello World! application with Python and Qt5", "url": "tutorials/creating-your-first-pyqt-window/", "duration": "07:30", "is_premium": false, "has_video": true}, {"id": "pyqt-signals-slots-events", "title": "PyQt5 Signals, Slots & Events", "subtitle": "Triggering actions in response to user behaviors and GUI events", "url": "tutorials/pyqt-signals-slots-events/", "duration": "13:20", "is_premium": false, "has_video": false}, {"id": "pyqt-basic-widgets", "title": "PyQt5 Widgets", "subtitle": "Using Qt5's library of built-in widgets to build your applications", "url": "tutorials/pyqt-basic-widgets/", "duration": "11:54", "is_premium": false, "has_video": false}, {"id": "pyqt-layouts", "title": "PyQt5 Layouts", "subtitle": "Use layouts to effortlessly position widgets within the window", "url": "tutorials/pyqt-layouts/", "duration": "08:22", "is_premium": false, "has_video": false}, {"id": "pyqt-actions-toolbars-menus", "title": "PyQt5 Toolbars & Menus \u2014 QAction", "subtitle": "Defining toolbars, menus and keyboard shortcuts with QAction", "url": "tutorials/pyqt-actions-toolbars-menus/", "duration": "12:01", "is_premium": false, "has_video": false}, {"id": "pyqt-dialogs", "title": "PyQt5 Dialogs and Alerts", "subtitle": "Notify your users and ask for their input", "url": "tutorials/pyqt-dialogs/", "duration": "08:39", "is_premium": false, "has_video": false}, {"id": "creating-multiple-windows", "title": "Creating additional windows", "subtitle": "Opening new windows for your application", "url": "tutorials/creating-multiple-windows/", "duration": "08:47", "is_premium": false, "has_video": false}]},
+            'concurrent-execution':{"id": "concurrent-execution", "url": "courses/concurrent-execution/", "title": "Threads & Processes", "subtitle": "Run concurrent tasks without impacting your UI", "content": "<p>As your applications become more complex you may finding yourself wanting to perform long-running tasks, such as interacting with remote APIs or performing complex calculations. By default any code you write exists in the same thread and process, meaning your long-running code can actually block Qt execution and cause your Python GUI app to \"hang\". In this PyQt5 tutorial we'll cover how to avoid this happening and keep your applications running smoothly, no matter the workload.</p>", "image": "images/courses/qt/concurrent.png", "first_child": "tutorials/multithreading-pyqt-applications-qthreadpool/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "multithreading-pyqt-applications-qthreadpool", "title": "Multithreading PyQt5 applications with QThreadPool", "subtitle": "Run background tasks concurrently without impacting your UI", "url": "tutorials/multithreading-pyqt-applications-qthreadpool/", "duration": "12:39", "is_premium": false, "has_video": false}, {"id": "qprocess-external-programs", "title": "Using QProcess to run external programs", "subtitle": "Run background programs without impacting your UI", "url": "tutorials/qprocess-external-programs/", "duration": "10:24", "is_premium": false, "has_video": false}]},
+            'graphics-plotting':{"id": "graphics-plotting", "url": "courses/graphics-plotting/", "title": "Graphics and Plotting", "subtitle": "Vector graphics and plotting using PyQtGraph", "content": "<p>Python is one of the most popular languages in the data science and machine learning fields. Effective visualization of data is a key part of building usable interfaces for data science. Matplotlib is the most popular plotting library in Python, and comes with support for PyQt built in. In addition, there are PyQt-specific plotting options available such as PyQtGraph which provide a better interactive experience. In this tutorial we'll look at these alternatives and build some simple plot interfaces.</p>", "image": "images/courses/qt/plotting.png", "first_child": "tutorials/plotting-pyqtgraph/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "plotting-pyqtgraph", "title": "Plotting with PyQtGraph", "subtitle": "Create custom plots in PyQt with PyQtGraph", "url": "tutorials/plotting-pyqtgraph/", "duration": "14:16", "is_premium": false, "has_video": false}, {"id": "plotting-matplotlib", "title": "Plotting with Matplotlib", "subtitle": "Create PyQt5 plots with the popular Python plotting library", "url": "tutorials/plotting-matplotlib/", "duration": "11:57", "is_premium": false, "has_video": false}]},
+            'qt-creator':{"id": "qt-creator", "url": "courses/qt-creator/", "title": "Creating applications with Qt Designer", "subtitle": "Using the drag-drop designer to develop your apps", "content": "<p>As your applications get larger or interfaces become more complicated, it can get a bit cumbersome to\ndefine all elements programmatically. The good news is that Qt comes with a graphical editor Qt Designer (or Qt Creator)\nwhich contains a drag-and-drop UI editor &mdash; Qt Designer. In this PyQt5 tutorial we'll cover the basics\nof creating Python GUIs with Qt Designer.</p>", "image": "images/courses/qt/designer.png", "first_child": "tutorials/first-steps-qt-creator/", "n_videos": 0, "n_tutorials": 5, "is_collapsed": null, "items": [{"id": "first-steps-qt-creator", "title": "First steps with Qt Designer", "subtitle": "Use Qt Designer's drag and drop interface to design your PyQt5 GUI", "url": "tutorials/first-steps-qt-creator/", "duration": "06:58", "is_premium": false, "has_video": false}, {"id": "qt-designer-gui-layout", "title": "Laying Out Your PyQt5 GUIs With Qt Designer", "subtitle": "Use Qt Designer to effortlessly build your application UI", "url": "tutorials/qt-designer-gui-layout/", "duration": "12:52", "is_premium": false, "has_video": false}, {"id": "creating-dialogs-qt-designer", "title": "Creating Dialogs With Qt Designer", "subtitle": "Using the drag and drop editor to build PyQt5 dialogs", "url": "tutorials/creating-dialogs-qt-designer/", "duration": "17:09", "is_premium": false, "has_video": false}, {"id": "embed-pyqtgraph-custom-widgets-qt-app", "title": "Embedding custom widgets from Qt Designer", "subtitle": "Learn how to use custom widgets in your PyQt5 applications when designing with Qt Designer", "url": "tutorials/embed-pyqtgraph-custom-widgets-qt-app/", "duration": "05:12", "is_premium": false, "has_video": false}, {"id": "qresource-system", "title": "The QResource System", "subtitle": "Using the QResource system to package additional data with your applications", "url": "tutorials/qresource-system/", "duration": "08:33", "is_premium": false, "has_video": false}]},
+            'example-browser':{"id": "example-browser", "url": "courses/example-browser/", "title": "Mozzarella Ashbadger", "subtitle": "Build your own tabbed web browser with PyQt5", "content": "<p>Now we've learnt the basics, we'll put it into practice building a real-life app.\nIn this course we'll create a functional web browser using Qt5 widgets.\nStarting with the basics and then\ngradually extending it to add features like opening and saving pages, help,\nprinting and tabbed browsing. Follow the tutorial step by step to create\nyour own app, but feel free to experiment as you go.</p>", "image": "images/courses/example-browser.jpg", "first_child": "examples/python-web-browser/", "n_videos": 0, "n_tutorials": 5, "is_collapsed": null, "items": [{"id": "python-web-browser", "title": "Mozzerella Ashbadger", "subtitle": "The first steps building the browser with PyQt5", "url": "examples/python-web-browser/", "duration": "01:14", "is_premium": false, "has_video": false}, {"id": "python-web-browser-navigation", "title": "Adding navigational controls to a PyQt5 Web Browser", "subtitle": "Hook up QAction signals to web browser slots", "url": "examples/python-web-browser-navigation/", "duration": "03:03", "is_premium": true, "has_video": false}, {"id": "python-web-browser-save-html", "title": "Open and save HTML in a PyQt5 browser", "subtitle": "Adding file dialogs to load and save HTML", "url": "examples/python-web-browser-save-html/", "duration": "01:15", "is_premium": false, "has_video": false}, {"id": "python-web-browser-dialogs", "title": "Adding application Help and About dialogs", "subtitle": "Put some finishing touches to your application", "url": "examples/python-web-browser-dialogs/", "duration": "01:51", "is_premium": true, "has_video": false}, {"id": "python-tabbed-web-browser", "title": "Tabbed web browsing", "subtitle": "Use signal redirection to add a multi-tab interface", "url": "examples/python-tabbed-web-browser/", "duration": "04:05", "is_premium": false, "has_video": false}]},
+            'qgraphics':{"id": "qgraphics", "url": "courses/qgraphics/", "title": "QGraphics Framework", "subtitle": "Vector graphic interfaces", "content": "<p>The Qt Graphics View framework is a scene-based vector graphics API. Using this you can create dynamic interactive interfaces for anything from vector graphics tools, data analysis workflow designers to simple 2D games.\nThe Graphics View Framework allows you to develop fast &amp; efficient scenes, containing millions of items, each with their own distinct graphic features and behaviors.</p>", "image": "images/courses/qgraphics.png", "first_child": "tutorials/pyqt-qgraphics-vector-graphics/", "n_videos": 0, "n_tutorials": 1, "is_collapsed": null, "items": [{"id": "pyqt-qgraphics-vector-graphics", "title": "Introduction to the QGraphics framework", "subtitle": "Creating vector interfaces using the QGraphics View framework", "url": "tutorials/pyqt-qgraphics-vector-graphics/", "duration": "12:47", "is_premium": false, "has_video": false}]},
+            'advanced-ui-features':{"id": "advanced-ui-features", "url": "courses/advanced-ui-features/", "title": "Extended UI features", "subtitle": "Extending your apps with complex GUI behaviour", "content": "<p>In this PyQt5 tutorial we'll cover some advanced features of Qt that you can use to improve\nyour Python GUIs.</p>", "image": "images/courses/systemtray.jpg", "first_child": "tutorials/transmitting-extra-data-qt-signals/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "transmitting-extra-data-qt-signals", "title": "Transmitting extra data with Qt Signals", "subtitle": "Modifying widget signals to pass contextual information to slots", "url": "tutorials/transmitting-extra-data-qt-signals/", "duration": "06:05", "is_premium": false, "has_video": false}, {"id": "system-tray-mac-menu-bar-applications-pyqt", "title": "System tray & Mac menu bar applications", "subtitle": "Add quick access functions to your apps", "url": "tutorials/system-tray-mac-menu-bar-applications-pyqt/", "duration": "03:45", "is_premium": false, "has_video": false}]},
+            'custom-widgets':{"id": "custom-widgets", "url": "courses/custom-widgets/", "title": "Custom Widgets", "subtitle": "Designing your own custom widgets in PyQt", "content": "<p>Widgets in Qt are built on bitmap graphics &mdash; drawing pixels on a rectangular canvas to\nconstruct the \"widget\". To be able to create your own custom widgets you first need to understand\nhow the <code>QPainter</code> system works and what you can do with it. In this PyQt5 tutorial we'll go\nfrom basic bitmap graphics to our own entirely custom widget.</p>", "image": "images/courses/qt/custom-widgets.png", "first_child": "tutorials/bitmap-graphics/", "n_videos": 0, "n_tutorials": 3, "is_collapsed": null, "items": [{"id": "bitmap-graphics", "title": "QPainter and Bitmap Graphics", "subtitle": "Introduction to the core features of QPainter", "url": "tutorials/bitmap-graphics/", "duration": "15:47", "is_premium": false, "has_video": false}, {"id": "creating-your-own-custom-widgets", "title": "Creating custom GUI widgets in PyQt5", "subtitle": "Build a completely functional custom widget from scratch using QPainter", "url": "tutorials/creating-your-own-custom-widgets/", "duration": "19:07", "is_premium": false, "has_video": false}, {"id": "qpropertyanimation", "title": "Animating custom widgets with QPropertyAnimation", "subtitle": "Add dynamic visual effects to your custom widgets", "url": "tutorials/qpropertyanimation/", "duration": "14:52", "is_premium": false, "has_video": false}]},
+            'pyside6-advanced-features':{"id": "pyside6-advanced-features", "url": "courses/pyside6-advanced-features/", "title": "Extended UI features", "subtitle": "Extending your PySide apps with complex GUI behaviour", "content": "<p>In this PySide6 tutorial we'll cover some advanced features of Qt that you can use to improve\nyour Python GUIs.</p>", "image": "images/courses/systemtray.jpg", "first_child": "tutorials/pyside6-transmitting-extra-data-qt-signals/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside6-transmitting-extra-data-qt-signals", "title": "Transmitting extra data with Qt Signals", "subtitle": "Modifying widget signals to pass contextual information to slots", "url": "tutorials/pyside6-transmitting-extra-data-qt-signals/", "duration": "06:06", "is_premium": false, "has_video": false}, {"id": "pyside6-system-tray-mac-menu-bar-applications", "title": "System tray & Mac menu bar applications", "subtitle": "Add quick access functions to your apps", "url": "tutorials/pyside6-system-tray-mac-menu-bar-applications/", "duration": "03:48", "is_premium": false, "has_video": false}]},
+            'pyside6-concurrent-execution':{"id": "pyside6-concurrent-execution", "url": "courses/pyside6-concurrent-execution/", "title": "Threads & Processes", "subtitle": "Run concurrent tasks without impacting your PySide UI", "content": "<p>As your applications become more complex you may finding yourself wanting to perform long-running tasks, such as interacting with remote APIs or performing complex calculations. By default any code you write exists in the same thread and process, meaning your long-running code can actually block Qt execution and cause your Python GUI app to \"hang\". In this PySide6 tutorial we'll cover how to avoid this happening and keep your applications running smoothly, no matter the workload.</p>", "image": "images/courses/qt/concurrent.png", "first_child": "tutorials/multithreading-pyside6-applications-qthreadpool/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "multithreading-pyside6-applications-qthreadpool", "title": "Multithreading PySide6 applications with QThreadPool", "subtitle": "Run background tasks concurrently without impacting your UI", "url": "tutorials/multithreading-pyside6-applications-qthreadpool/", "duration": "12:49", "is_premium": false, "has_video": false}, {"id": "pyside6-qprocess-external-programs", "title": "Using QProcess to run external programs", "subtitle": "Run background programs without impacting your UI", "url": "tutorials/pyside6-qprocess-external-programs/", "duration": "10:24", "is_premium": false, "has_video": false}]},
+            'pyside6-packaging-and-distribution':{"id": "pyside6-packaging-and-distribution", "url": "courses/pyside6-packaging-and-distribution/", "title": "Packaging and distribution", "subtitle": "Sharing your PySide6 applications with other people", "content": "<p>There comes a point in any app's development where it needs to leave home &mdash; half the fun in writing software is being able to share it with other people. Packaging Python GUI apps can be a little tricky, but in this PySide6 tutorial we'll cover how to package up your apps to share, whether commercially or just for fun.</p>", "image": "images/courses/qt/installer.png", "first_child": "tutorials/packaging-pyside6-applications-windows-pyinstaller-installforge/", "n_videos": 0, "n_tutorials": 3, "is_collapsed": null, "items": [{"id": "packaging-pyside6-applications-windows-pyinstaller-installforge", "title": "Packaging PySide6 applications for Windows with PyInstaller & InstallForge", "subtitle": "Turn your PyQt6 application into a distributable installer for Windows", "url": "tutorials/packaging-pyside6-applications-windows-pyinstaller-installforge/", "duration": "25:39", "is_premium": false, "has_video": false}, {"id": "packaging-pyside2-applications-pyinstaller-macos-dmg", "title": "Packaging PySide2 applications into a macOS app with PyInstaller", "subtitle": "Turn your PySide2 application into a distributable app", "url": "tutorials/packaging-pyside2-applications-pyinstaller-macos-dmg/", "duration": "23:32", "is_premium": false, "has_video": false}, {"id": "packaging-data-files-pyside6-with-qresource-system", "title": "Using QResource to package data files with PyInstaller", "subtitle": "Serialize data files for easy packaging in Python", "url": "tutorials/packaging-data-files-pyside6-with-qresource-system/", "duration": "15:57", "is_premium": false, "has_video": false}]},
+            'pyside6-model-views':{"id": "pyside6-model-views", "url": "courses/pyside6-model-views/", "title": "ModelViews and Databases", "subtitle": "Connecting your PySide application to data sources", "content": "<p>All but the simplest of apps will usually need to interact with some kind of external data store &mdash;\nwhether that's a database, a remote API or simple configuration data. The Qt ModelView architecture\nsimplifies the linking and updating your UI with data in custom formats or from external sources. In\nthis PySide6 tutorial we'll discover how you can use Qt ModelViews to build high performance Python GUIs.</p>", "image": "images/courses/qt/modelviews.png", "first_child": "tutorials/pyside6-modelview-architecture/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside6-modelview-architecture", "title": "The ModelView Architecture", "subtitle": "Qt's MVC-like interface for displaying data in views", "url": "tutorials/pyside6-modelview-architecture/", "duration": "12:31", "is_premium": false, "has_video": false}, {"id": "pyside6-qtableview-modelviews-numpy-pandas", "title": "Displaying tabular data in Qt ModelViews", "subtitle": "Create customized table views with conditional formatting, numpy and pandas data sources.", "url": "tutorials/pyside6-qtableview-modelviews-numpy-pandas/", "duration": "17:12", "is_premium": false, "has_video": false}]},
+            'pyside6-custom-widgets':{"id": "pyside6-custom-widgets", "url": "courses/pyside6-custom-widgets/", "title": "Custom Widgets", "subtitle": "Designing your own custom widgets in PySide6", "content": "<p>Widgets in Qt are built on bitmap graphics &mdash; drawing pixels on a rectangular canvas to\nconstruct the \"widget\". To be able to create your own custom widgets you first need to understand\nhow the <code>QPainter</code> system works and what you can do with it. In this PySide6 tutorial we'll go\nfrom basic bitmap graphics to our own entirely custom widget.</p>", "image": "images/courses/qt/custom-widgets.png", "first_child": "tutorials/pyside6-bitmap-graphics/", "n_videos": 0, "n_tutorials": 3, "is_collapsed": null, "items": [{"id": "pyside6-bitmap-graphics", "title": "QPainter and Bitmap Graphics", "subtitle": "Introduction to the core features of QPainter", "url": "tutorials/pyside6-bitmap-graphics/", "duration": "16:20", "is_premium": false, "has_video": false}, {"id": "pyside6-creating-your-own-custom-widgets", "title": "Creating custom GUI widgets in PySide6", "subtitle": "Build a completely functional custom widget from scratch using QPainter", "url": "tutorials/pyside6-creating-your-own-custom-widgets/", "duration": "19:08", "is_premium": false, "has_video": false}, {"id": "pyside6-animated-widgets", "title": "Animating custom widgets with QPropertyAnimation", "subtitle": "Add dynamic visual effects to your custom widgets", "url": "tutorials/pyside6-animated-widgets/", "duration": "14:53", "is_premium": false, "has_video": false}]},
+            'pyside6-qt-designer':{"id": "pyside6-qt-designer", "url": "courses/pyside6-qt-designer/", "title": "Creating applications with Qt Designer", "subtitle": "Using the drag-drop designer to develop your PySide apps", "content": "<p>As your applications get larger or interfaces become more complicated, it can get a bit cumbersome to\ndefine all elements programmatically. The good news is that Qt comes with a graphical editor Qt Designer (or Qt Creator)\nwhich contains a drag-and-drop UI editor &mdash; Qt Designer. In this PySide6 tutorial we'll cover the basics\nof creating Python GUIs with Qt Designer.</p>", "image": "images/courses/qt/designer.png", "first_child": "tutorials/pyside6-first-steps-qt-designer/", "n_videos": 0, "n_tutorials": 2, "is_collapsed": null, "items": [{"id": "pyside6-first-steps-qt-designer", "title": "First steps with Qt Designer", "subtitle": "Use Qt Designer's drag and drop interface to design your GUI", "url": "tutorials/pyside6-first-steps-qt-designer/", "duration": "07:13", "is_premium": false, "has_video": false}, {"id": "pyside6-qresource-system", "title": "The QResource System", "subtitle": "Using the QResource system to package additional data with your applications", "url": "tutorials/pyside6-qresource-system/", "duration": "08:34", "is_premium": false, "has_video": false}]},
+            'pyside6-getting-started':{"id": "pyside6-getting-started", "url": "courses/pyside6-getting-started/", "title": "Getting started with PySide6", "subtitle": "Take your first steps building Python & Qt6 apps with PySide6", "content": "<p>Like writing any code, building PySide6 applications is all about approaching it in the right way. In the first part of the course we cover the fundamentals necessary to get you building Python GUIs as quickly as possible. By the end of the first part you'll have a running <code>QApplication</code> which we can then customize.</p>", "image": "images/courses/helloworld_JeRwi1P.jpg", "first_child": "tutorials/pyside6-creating-your-first-window/", "n_videos": 0, "n_tutorials": 7, "is_collapsed": null, "items": [{"id": "pyside6-creating-your-first-window", "title": "Creating your first app with PySide6", "subtitle": "A simple Hello World! application with Python and Qt", "url": "tutorials/pyside6-creating-your-first-window/", "duration": "07:33", "is_premium": false, "has_video": false}, {"id": "pyside6-signals-slots-events", "title": "PySide6 Signals, Slots & Events", "subtitle": "Triggering actions in response to user behaviors and GUI events", "url": "tutorials/pyside6-signals-slots-events/", "duration": "10:00", "is_premium": true, "has_video": false}, {"id": "pyside6-widgets", "title": "PySide6 Widgets", "subtitle": "Using PySide6's built-in widgets to build your applications", "url": "tutorials/pyside6-widgets/", "duration": "20:00", "is_premium": true, "has_video": false}, {"id": "pyside6-layouts", "title": "PySide6 Layouts", "subtitle": "Use layouts to effortlessly position widgets within the window", "url": "tutorials/pyside6-layouts/", "duration": "18:00", "is_premium": true, "has_video": false}, {"id": "pyside6-actions-toolbars-menus", "title": "PySide6 Toolbars & Menus \u2014 QAction", "subtitle": "Defining toolbars, menus and keyboard shortcuts with QAction", "url": "tutorials/pyside6-actions-toolbars-menus/", "duration": "12:00", "is_premium": true, "has_video": false}, {"id": "pyside6-dialogs", "title": "PySide6 Dialogs and Alerts", "subtitle": "Notify your users and ask for their input", "url": "tutorials/pyside6-dialogs/", "duration": "05:00", "is_premium": true, "has_video": false}, {"id": "pyside6-creating-multiple-windows", "title": "Creating additional windows", "subtitle": "Opening new windows for your application", "url": "tutorials/pyside6-creating-multiple-windows/", "duration": "08:47", "is_premium": false, "has_video": false}]},
+            'pyside6-plotting':{"id": "pyside6-plotting", "url": "courses/pyside6-plotting/", "title": "Graphics and Plotting", "subtitle": "Vector graphics and plotting using PyQtGraph in PySide6", "content": "<p>Python is one of the most popular languages in the data science and machine learning fields. Effective visualization of data is a key part of building usable interfaces for data science. Matplotlib is the most popular plotting library in Python, and comes with support for PySide built in. In addition, there are PySide6 specific plotting options available such as PyQtGraph which provide a better interactive experience. In this tutorial we'll look at these alternatives and build some simple plot interfaces.</p>", "image": "images/courses/qt/plotting.png", "first_child": null, "n_videos": 0, "n_tutorials": 0, "is_collapsed": null, "items": []},
+    }
+  },
+  remupdated: function () {
+    if (GumroadOverlay) {
+        GumroadOverlay.reload();
+    }
+  },
+  methods: {
+    init: function() {
+        this.load_user_data()
+        this.affiliate_landing()
+    },
+    affiliate_landing: function() {
+        var urlParams = new URLSearchParams(window.location.search),
+            affiliateId = localStorage.getItem('author_affiliate_id'),
+            urlaffiliateId = urlParams.get('aid');
+
+        if (urlaffiliateId) {
+            this.affiliateId = urlaffiliateId;
+        } else if (affiliateId) {
+            this.affiliateId = affiliateId;
+        }
+    },
+    discount_active: function () {
+        return (this.localizedPrices || this.activeDiscount)
+    },
+    discounted_price: function (price) {
+        var pc = false;
+        if (this.localizedPrices) {
+            pc = localizedDiscount[this.couponCode]
+        } else if (this.activeDiscount) {
+            pc = this.activeDiscount.discount;
+        }
+
+        if (pc != false) {
+            pc = (100 - pc) / 100;
+            return Math.ceil(price * pc)
+        }
+
+        return price
+    },
+    load_user_data: function() {
+        var userdata = localStorage.getItem('user');
+        if (userdata) {
+            Object.assign(this.user, JSON.parse(userdata));
+        }
+    },
+    maybe_play_video: function() {
+        if (this.video && !this.is_video_loaded) {
+            this.play_video();
+        }
+    },
+    localize: function() {
+        console.log("Localize.");
+        var localdata = localStorage.getItem('localization');
+
+        if (!localdata || localdata == 'undefined') {
+            // Will callback on complete of API request.
+            return this.get_localization()
+        }
+
+        localdata = JSON.parse(localdata)
+        this.countryCode = localdata.iso_code;
+        this.countryRegion = localdata.region;
+        // Don't localize, if site-wide is bigger.
+        if (this.activeDiscount && (localizedDiscount[localdata.discount] <= this.activeDiscount.discount)) {
+            console.log("Active discount in effect.");
+            this.localizedPrices = false;
+            return false;
+        }
+        console.log("Prices localized.");
+        this.couponCode = localdata.discount;
+        this.localizedPrices = true;
+
+    },
+    get_localization: function() {
+        var self = this;
+        console.log("Localization API request.");
+        axios
+            .get(self.apiurl + '/api/v1/localize/')
+            .then(function (response){
+                if (response.data.success){
+                    localStorage.setItem('localization', JSON.stringify(response.data.localization));
+                    self.localize();
+                }
+
+            })
+    },
+    play_video: function() {
+        var url = (this.video.includes('https://') ? this.video:'https://vimeo.com/' + this.video),
+            options = {
+                url: url,
+                responsive: true,
+                dnt: true,
+            };
+        var player = new Vimeo.Player('player', options);
+        this.is_video_loaded = true;
+    },
+    is_hidden: function(id) {
+        return this.hidden.includes(id);
+    },
+    unhide: function(id) {
+        var index = this.hidden.indexOf(id);
+        if (index !== -1){
+            this.hidden.splice(index, 1);
+        }
+    },
+    toggle_tutorial_complete: function (id) {
+        var completed = this.user.completed;
+
+        if (completed.includes(id)){
+            var index = this.user.completed.indexOf(id);
+            if (index !== -1){
+                this.user.completed.splice(index, 1);
+            }
+
+        } else {
+            this.user.completed.push(id);
+        }
+        //$set(this.user.completed, completed);
+        localStorage.setItem('user', JSON.stringify(this.user));
+    },
+    is_course_completed: function (course) {
+        return course.items.every(v => this.user.completed.includes(v.id));
+    },
+    is_course_id_completed: function (course_id){
+        return this.is_course_completed(this.courses[course_id])
+    },
+    course_completion_n: function(course) {
+        var self = this,
+            completed_n = 0,
+            total_n = course.items.length;
+
+        sum_completed = function (item) {
+            if (self.user.completed.includes(item.id)) {
+                completed_n ++;
+            }
+        }
+        course.items.forEach(item => sum_completed(item));
+
+        return completed_n;
+    },
+    course_completion_pc: function (course) {
+        var total_n = course.items.length,
+            completed_n = this.course_completion_n(course);
+
+        return (completed_n/total_n).toFixed(1) * 100;
+    },
+    course_id_complete_pc: function(course_id) {
+        return this.course_completion_pc(this.courses[course_id])
+    },
+    courses_completion_pc: function(courses) {
+    if (!this.user.is_authenticated) {return 0;}
+
+        var self = this,
+            completed_n = 0,
+            total_n = 0;
+
+        sum_completed = function(item) {
+            total_n ++;
+            if (self.user.completed.includes(item.id)) {
+                completed_n ++;
+            }
+        }
+        courses.forEach(
+            course => course.items.forEach(item => sum_completed(item))
+        );
+        return (completed_n / total_n).toFixed(1) * 100;
+
+    },
+    set_affiliate: function(affiliateId) {
+        this.affiliateId = affiliateId;
+        localStorage.setItem('author_affiliate_id', affiliateId);
+    },
+    switch_tab: function(e) {
+        var clickedtab = e.target,
+            tabid = clickedtab.getAttribute('data-tab');
+
+        // Update tab display.
+        siblings = clickedtab.parentNode.querySelectorAll('li');
+        [].forEach.call(siblings, function(el) {
+            el.classList.remove("current");
+        });
+
+        clickedtab.classList.add("current");
+
+        // Change the active code block.
+        codecontainer = clickedtab.parentNode.parentNode;
+        codeblocks = codecontainer.querySelectorAll('.tab-content');
+        [].forEach.call(codeblocks, function(el) {
+            el.classList.remove("current");
+            if (el.id == tabid){el.classList.add('current');}
+        });
+    },
+    paddle_affiliate_iframe: function() {
+        if (this.affiliateId && document.referrer != this.siteurl) {
+            console.log("Affiliate tracking", this.affiliateId)
+            var ifrm = document.createElement("iframe");
+            ifrm.setAttribute("src", "https://a.paddle.com/v2/click/" + 16090 + "/" + this.affiliateId + "?link=1514");
+            ifrm.style.display = "none";
+            document.body.appendChild(ifrm);
+        }
+    }
+  }
+});
+
+Vue.set(vm, 'current_page_id', 'pyside6-widgets');
+vm.init();
+vm.localize();
+
+function playVideo (isVisible, entry) {
+    var video = entry.target;
+    if (isVisible){
+        video.play();
+    } else if (video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2) {
+        video.pause();
+    }
+}
+
+
+
+
+
+
+    </script>
+
+
+
+<script type="text/javascript">
+    vm.paddle_affiliate_iframe();
+</script>
+
+    <script defer src="https://instant.page/2.0.0" type="module"
+        integrity="sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        });
+    </script>
+
+
+</body>
+
+</html>
