@@ -1,1 +1,2 @@
-# ProgrammePractice
+这个仓库包含Python的练习、SQL的学习笔记和串口屏的学习笔记。
+Python练习中的菜鸟教程基础练习是针对Python基础知识的一些习题，matplotlib、numpy、pandas、openpyxl、os、re、pyside6、theading、queue、zmq、socket模块是根据教程做的一些练习和笔记及其应用。SQL练习是一些学习笔记和练习的截图。串口屏练习是以一些教程及用LUA脚本编写应用程序。
